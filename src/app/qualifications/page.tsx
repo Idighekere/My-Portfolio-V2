@@ -17,10 +17,10 @@ const page = (props: Props) => {
     return (
         <main>
             <h2>Experience</h2>
-            {experience.map(e => (<div key={e} >
+            {/* {experience.map(e => (<div key={e} >
                 <Experience xp={e} />
             </div>)
-            )}
+            )} */}
             <Circle />
             <Line />
         </main>
@@ -32,7 +32,7 @@ const Experience = (props: Props) => {
         <div>
             <div className='flex '>
                 <Circle />
-                <h2>{props.xp.company}</h2>
+                {/* <h2>{props.xp.company}</h2> */}
             </div>
         </div >
     )

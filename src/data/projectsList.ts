@@ -11,10 +11,9 @@ export type projectType = {
   category?: string;
   slug: string;
   images: string[];
-
-  highlights?: string[];
-  challenges?: string[];
-  solutions?: string[];
+  highlights?: string[] | undefined;
+  challenges?: string[] | undefined;
+  solutions?: string[] | undefined;
   conclusion?: string;
 };
 
@@ -28,7 +27,11 @@ export const projectList: projectType[] = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptatem a rerum corporis fugit dolores!",
     ],
     imageUrl: "/projects/willbethere.netlify.app.jpeg",
-    images: ["", ""],
+    images: [
+      "/projects/project 1/iPhone-13-PRO-MAX-willbethere.netlify.app.png",
+      "/projects/project 1/Galaxy-Tab-S7-willbethere.netlify.app.png",
+      "/projects/project 1/Macbook-Air-willbethere.netlify.app.png",
+    ],
     isFeatured: true,
     stacks: ["ReactJS", "Tailwind", "HTML", "CSS"],
     liveLink: "https://willbethere.netlify.app",

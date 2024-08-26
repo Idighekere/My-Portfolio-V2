@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Titillium_Web, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import "../../public/fonts/fonts.css"
 import { TooltipProvider } from "@radix-ui/react-tooltip";
@@ -8,10 +8,10 @@ import Footer from "@/components/ui/common/Footer";
 import MobileNav from "@/components/ui/common/MobileNav";
 
 // const bigShoulder = BigShoulderDisplay({ subsets: ["latin"] });
-const titillium = Titillium_Web({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "600", "700", "900"]
-});
+// const titillium = Titillium_Web({
+//   subsets: ["latin"],
+//   weight: ["200", "300", "400", "600", "700", "900"]
+// });
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

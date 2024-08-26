@@ -1,4 +1,4 @@
-import { Icon } from '@iconify-icon/react/dist/iconify.mjs'
+import { Icon, IconifyIcon } from '@iconify-icon/react/dist/iconify.mjs'
 import Image from 'next/image'
 import React from 'react'
 
@@ -6,7 +6,7 @@ type Props = {}
 type LanguageType = {
     // map(arg0: (list: any) => React.JSX.Element): React.ReactNode
     name?: string;
-    icon?: string;
+    icon?: string | IconifyIcon
 }
 
 const ListsOfTools: LanguageType[] = [
@@ -47,9 +47,10 @@ const ListsOfTools: LanguageType[] = [
 const LanguageBox: React.FC = ({ icon, name }: LanguageType) => {
 
     return (
-        <div className="flex flex-col items-center  text-primary-blue hover:text-light-blue duration-200 hover:scale-110 transform transition-transform ease-in-out        //hover:shadow-md cursor-pointer">
-            <Icon icon={icon} height="40" width="40" className="text-7xl md:text-2xl" />
-            <p className="text-[0.8rem]">{name}</p>
+        <div>{ListsOfTools.map(tool => (<div className="flex flex-col items-center  text-primary-blue hover:text-light-blue duration-200 hover:scale-110 transform transition-transform ease-in-out        //hover:shadow-md cursor-pointer" key={tool.icon as string}>
+            <Icon icon={tool.icon as string | IconifyIcon} height="40" width="40" className="text-7xl md:text-2xl" />
+            <p className="text-[0.8rem]">{tool.name}</p>
+        </div>))}
         </div>
     )
 }
@@ -66,10 +67,10 @@ const Skills = (props: Props) => {
                 </div>
                 <div className="rounded-lg bg-secondary grid grid-cols-3 sm:grids-cols-3 md:grid-cols-4 lg:grid-cols-5 /justify-center p-5 py-9 md:p-10  gap-5 w-full md:w-1/2 ">
 
-                    {ListsOfTools.map(list => (<span key={list.name}><LanguageBox name={list?.name} icon={list?.icon} /></span>))}
+                    <LanguageBox />
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 
