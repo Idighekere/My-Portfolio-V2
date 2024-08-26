@@ -4,8 +4,8 @@ import { projectList } from '@/data/projectsList'
 import ProjectCard from '@/components/ui/common/ProjectCard'
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs'
 
-type Props = {}
-interface tabsType {
+// type Props = {}
+type tabsType = {
     id: string;
     title: string
 
@@ -32,7 +32,12 @@ const tabsLists: tabsType[] = [
 
     },
 ]
-const Tabs = ({ tab, handleTabChange, currentTab }) => {
+type Prop = {
+    currentTab: string;
+    handleTabChange: any
+    tab: any
+}
+const Tabs = ({ tab, handleTabChange, currentTab }: Prop) => {
     return (
         <button onClick={() => handleTabChange(tab.id)} className={`cursor-pointer hover:text-light-blue uppercase text-xl whitespace-nowrap inline-block ${currentTab === tab.id ? "font-[600] text-soft-white" : "font-[400] "} font-incognito`}>{tab.title}</button>
     )

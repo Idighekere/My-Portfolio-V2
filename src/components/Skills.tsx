@@ -9,7 +9,7 @@ type LanguageType = {
     icon?: string;
 }
 
-const ListsOfTools: LanguageType = [
+const ListsOfTools: LanguageType[] = [
     {
         name: "HTML",
         icon: "flowbite:html-solid",
