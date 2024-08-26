@@ -59,7 +59,7 @@ const Page = (props: any) => {
                     tabsLists.map(tab => (<Tabs currentTab={currentTab} tab={tab} handleTabChange={handleTabChange} key={tab.id} />))}</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 .grid-flow-dense .grid-row-auto auto-rows-fr gap-4" style={{ gridAutoRows: "auto" }}>{filteredProjects.map(project => (<ProjectCard featured={project} key={project.id} />))}</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 .grid-flow-dense .grid-row-auto auto-rows-fr gap-4" style={{ gridAutoRows: "auto" }}>{filteredProjects.map(project => (<ProjectCard project as Props['featured']} key={project.id} />))}</div>
 
 
 
