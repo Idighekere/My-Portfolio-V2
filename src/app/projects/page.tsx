@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react'
 import { projectList } from '@/data/projectsList'
-import {ProjectCard, Props} from '@/components/ui/common/ProjectCard'
+import ProjectCard from '@/components/ui/common/ProjectCard'
+import Props from '@/components/ui/common/ProjectCard'
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs'
 
 // type Props = {}
