@@ -48,7 +48,7 @@ const MobileNav = (props: Props) => {
                     <span key={link.name} className={` //flex flex-col items-center gap-0`}>
                         <Link href={link.url} className=" flex flex-col items-center gap-0">
                             <span className={` ${pathname === link.url ? "  text-primary-blue" : ""} `}>
-                                <Icon icon={link?.icon as string | IconifyIcon} width="22" height="22" style={{ color: pathname === link.url ? "#1e90ff" : "" }} /></span>
+                                <Icon icon={link?.icon as string | IconifyIcon} width="22" height="22" /></span>
                             <p className={`text-sm mt-0 ${pathname === link.url ? " font-[600] text-primary-blue" : ""}`}>{link.name}</p>
                         </Link>
                     </span>
