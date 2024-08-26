@@ -1,0 +1,84 @@
+/* Font 1 */
+
+@font-face {
+    font-family: Incognito;
+    src: url(/fonts/ae08937ea0d7b3a1-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Incognito;
+    src: url(/fonts/5f9fe0e2d0e1408a-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Incognito;
+    src: url(/fonts/763220fefbf7bbb8-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Incognito;
+    src: url(/fonts/cdd118e912539896-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+/* A FALLBACK FONT */
+@font-face {
+    font-family: Incognito_Fallback;
+    src: local("Arial");
+    ascent-override: 80.29%;
+    descent-override: 17.83%;
+    line-gap-override: 0.00%;
+    size-adjust: 97.03%
+}
+
+@font-face {
+    font-family: Gitlab_Mono;
+    src: url(/fonts/43ed371772fb8bb1-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Gitlab_Mono;
+    src: url(/fonts/43ed371772fb8bb1-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Gitlab_Mono;
+    src: url(/fonts/43ed371772fb8bb1-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Gitlab_Mono;
+    src: url(/fonts/43ed371772fb8bb1-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Gitlab_Mono_Fallback;
+    src: local("Arial");
+    ascent-override: 77.57%;
+    descent-override: 22.82%;
+    line-gap-override: 0.00%;
+    size-adjust: 131.49%
+}

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root,
+#root,
+#docs-root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --grey: #a8a9b4;
+  --deep-grey: #94959b;
+  --blue: #149ddd;
+  --blue-shade: #0e668f;
+  --card-blue-shade: #112240;
+  --deep-blue: #2c2f3f;
+  --bgd: #040b14;
+  --white: #fff;
+  --soft-white: #ccd6f6;
+  --navy: #0a192f;
+  --light-blue: #9cb7ff;
+  --section-bgd: #00021a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    /* --background-start-rgb: #272727; */
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+
+  background-color: #00021a;
+  /* background-color: #061417; */
+  color: #a8a9b4;
+  /* font-family: "Gitlab_Mono", "Incognito_Fallback", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; */
+}
+
+h1,
+h2,
+{
+
+font-family: "Incognito", "Incognito_Fallback", sans-serif
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
