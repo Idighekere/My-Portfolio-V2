@@ -42,7 +42,7 @@ const Tabs = ({ tab, handleTabChange, currentTab }: Prop) => {
         <button onClick={() => handleTabChange(tab.id)} className={`cursor-pointer hover:text-light-blue uppercase text-xl whitespace-nowrap inline-block ${currentTab === tab.id ? "font-[600] text-soft-white" : "font-[400] "} font-incognito`}>{tab.title}</button>
     )
 }
-const Page = (props: Props) => {
+const Page = (props: any) => {
 
     const [currentTab, setCurrentTab] = useState<string>("all")
     const handleTabChange = (id: string) => {
