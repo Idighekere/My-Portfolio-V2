@@ -42,10 +42,20 @@ body {
 }
 
 h1,
-h2,
-{
+h2 {
+  font-family: "Incognito", "Incognito_Fallback", sans-serif;
+}
 
-font-family: "Incognito", "Incognito_Fallback", sans-serif
+img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+img:hover {
+  transform: scale(1.02) translateY(-5)
+    /* hover:scale-110 transform transition-transform ease-in-out  */
+    /* transit */
 }
 
 @layer utilities {

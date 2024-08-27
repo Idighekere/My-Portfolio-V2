@@ -58,14 +58,14 @@ const Hero = (props: Props) => {
                 </div> */}
             </main>
             {/* <<==============MOBILE HERRRO===========>> */}
-            <div className="md:hidden block">
-                <div className="flex flex-col items-center justify-center">
-                    <div className="//bg-custom-gradient //p-1 relative h-64 w-full rounded-lg ">
+            <div className="md:hidden flex flex-col /h-screen">
+                <div className="flex flex-col items-center justify-center mx-auto w-full">
+                    <div className=" relative h-64 w-full rounded-lg  ">
                         <Image
                             src={"/Idighekere.jpg"}
                             fill
                             alt="Idighekere Udo"
-                            className="rounded-lg  max-w-[250px] filter grayscale border-deep-blue border-8 md:hidden"
+                            className="rounded-md  max-w-[250px] filter grayscale  md:hidden mx-auto border-deep-blue border-6"
                         />
                     </div>
                     <div>

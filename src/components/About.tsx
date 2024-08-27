@@ -72,7 +72,7 @@ const About = (props: Props) => {
                 </div> */}
             </div>
 
-            <div className="flex gap-3 items-center flex-col md:flex-row">
+            <div className="/flex gap-3 items-center flex-col md:flex-row hidden">
                 <div>
                     <h2 className="text-xl font-[600] text-center text-soft-white">ABOUT ME</h2>
                     <p className="text-grey">

@@ -34,8 +34,8 @@ const ProjectCard = ({ featured }: Props) => {
     const projects = "/projects"
     return (
         <div className="//bg-custom-gradient p-[2px] rounded-lg shadow-light h-full">
-            <div className={`flex lg:cgap-8 flex-col  //border-2 bg- rounded-lg hover:shadow-lg hover:shadow-blue-shade/50 duration-200 text-grey ${pathname === projects ? "lg:flex-col" : "lg:flex-row"}`}>
-                <div className={`${pathname === projects ? " rounded-tl-lg rounded-tr-lg " : "md:pt-10 md:px-7 lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-tr-none"}  flex flex-col justify-end items-center border-2 border-secondary`}>
+            <div className={` hover:scale-[1.01] transform transition-transform ease-in-out  flex lg:cgap-8 flex-col  border-2 border-primary-blue/40 rounded-lg hover:shadow-lg hover:shadow-blue-shade/50 duration-300 text-grey ${pathname === projects ? "lg:flex-col" : "lg:flex-row"}`}>
+                <div className={`${pathname === projects ? " rounded-tl-lg rounded-tr-lg " : "md:pt-10 md:px-7 lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-tr-none"}  flex flex-col justify-end items-center /border-2 border-secondary`}>
                     <div className={` gap-1 py-3 hidden flex-wrap ${pathname === projects ? "hidden" : "md:flex"}`}>
                         <p className="text-[.9rem] font-[600]">Stacks</p>
                         {featured.stacks.map((icon) => (

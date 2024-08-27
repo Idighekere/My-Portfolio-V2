@@ -23,7 +23,7 @@ const ListsOfTools: LanguageType[] = [
         icon: "akar-icons:javascript-fill",
     },
     {
-        name: "Tailwind CSS",
+        name: "Tailwind",
         icon: "ri:tailwind-css-fill",
     },
     {
@@ -47,9 +47,9 @@ const ListsOfTools: LanguageType[] = [
 const LanguageBox: React.FC = ({ icon, name }: LanguageType) => {
 
     return (
-        <div className="rounded-lg bg-secondary grid grid-cols-3 sm:grids-cols-3 md:grid-cols-4 lg:grid-cols-5 /justify-center p-5 py-9 md:p-10  gap-5 w-full md:w-1/2">{ListsOfTools.map(tool => (<div className="flex flex-col items-center  text-primary-blue hover:text-light-blue duration-200 hover:scale-110 transform transition-transform ease-in-out        //hover:shadow-md cursor-pointer" key={tool.icon as string}>
+        <div className="grid grid-cols-3 sm:grids-cols-3 md:grid-cols-4 lg:grid-cols-5 p-5 py-9 md:p-10  gap-3 md:gap-5 ">{ListsOfTools.map(tool => (<div className="flex flex-col items-center  text-primary-blue hover:text-light-blue duration-200 hover:scale-110 transform transition-transform ease-in-out        //hover:shadow-md cursor-pointer" key={tool.icon as string}>
             <Icon icon={tool.icon as string | IconifyIcon} height="40" width="40" className="text-7xl md:text-2xl" />
-            <p className="text-[0.8rem]">{tool.name}</p>
+            <p className="text-[0.7rem]">{tool.name}</p>
         </div>))}
         </div>
     )
@@ -65,7 +65,7 @@ const Skills = (props: Props) => {
                     <p className="text-grey">What I work with</p>
 
                 </div>
-                <div className=" ">
+                <div className="rounded-lg bg-secondary /justify-center  w-full md:w-1/2">
 
                     <LanguageBox />
                 </div>
