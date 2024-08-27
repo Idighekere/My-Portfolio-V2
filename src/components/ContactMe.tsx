@@ -12,7 +12,7 @@ const ContactMe = (props: Props) => {
                     <input type="text" name="" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50" placeholder="Full Name" required />
                     <input type="mail" name="" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Email Address" required />
                     <input type="text" name="" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Phone Number" />
-                    <textarea name="message" id="message" cols={"20"} rows={"10"} className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Message"></textarea>
                     <button className="border border-primary-blue/80 bg-primary-blue/80 px-3 py-1 text-soft-white/50 w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-transparent hover:border" >Send Message</button>
                 </div>
             </form >
