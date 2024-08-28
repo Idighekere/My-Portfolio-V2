@@ -44,7 +44,7 @@ const page = (props: Props) => {
         return <div>Project not found</div>
     }
     return (
-        <div className={`px-5 md:px-20`}>
+        <div className={`//px-5 md:px-20`}>
             {/* {props.params.slug} */}
 
             <ProjectDetails project={project} />
