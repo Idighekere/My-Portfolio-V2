@@ -1,5 +1,7 @@
 "use client"
 import React from 'react'
+import { Icon } from '@iconify-icon/react/dist/iconify.mjs'
+
 import { experienceType } from '@/data/experience'
 import { experience } from '@/data/experience'
 
@@ -50,7 +52,7 @@ const TimeLine = (prop: Props) => {
                             <h3 className="text-2xl font-[600] text-center font-incognito text-soft-white m-0 p-0">{xp.company}</h3>
                             <p className="text-[1.125rem] font-[600] text-center text-soft-white p-0 m-0">{xp.role}</p>
                             <time className='uppercase tracking-widest pb-2 text-sm text-dark-grey'><span>{xp.duration.start}</span> - <span className={`${xp.duration.end == "Present" ? "text-primary-blue" : ""}`}>{xp.duration.end}</span></time>
-                            <ul className='list-none marker:text-primary-blue list-outside ml-1'>{xp.tasks.map(task => (<li key={task} className='relative ml-0 before:w-2 before:h-2 before:bg-primary-blue before:p-1 before:rounded-full before:flex before:mr-1 before:items-center before:justify-center before:flex-row //before:inline /before:absolute before:left-0 /before:top-1/2 before:transform-translate'>{task}</li>))}</ul>
+                            <ul className='list-none marker:text-primary-blue list-outside ml-1'>{xp.tasks.map(task => (<li key={task} className='relative ml-0 before:w-2 before:h-2 before:bg-primary-blue before:p-1 before:rounded-full flex before:mr-1 items-center gap-2 before:justify-center before:flex-row //before:inline /before:absolute before:left-0 /before:top-1/2 before:transform-translate'><Icon icon="ei:check" width="20" height="20"  style={{color: #4d4d4d}} /><span>{task}</span></li>))}</ul>
                         </div>
                     </div>)}
                 </div>)
