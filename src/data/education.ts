@@ -16,7 +16,7 @@ export const education: educationType[] = [
   {
     id: "1",
     degree: "Bachelor of Engineering",
-    desc: "Studying computer engineering ",
+    desc: "Studying computer engineering. Currently in the second year of the degree.",
     school: "University of Uyo",
     duration: {
       start: "January 2022",
@@ -27,8 +27,8 @@ export const education: educationType[] = [
   },
   {
     id: "2",
-    degree: "West African Secondary School Certificate",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
+    degree: "WASSCE & NECO",
+    desc: "SSS1-SSS3: Senior school certificate obtained. (West African Secondary School Certificate).",
     school: "African Christian Sec. Sch. Usung Atiat",
     duration: {
       start: "September 2018",
@@ -39,8 +39,8 @@ export const education: educationType[] = [
   },
   {
     id: "3",
-    degree: "Basic Education Certificate Examination",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
+    degree: "BECE",
+    desc: "JSS1-JSS3: Junior Secondary School certificate obtained (Basic Education Certificate Examination)",
     school: "Federal Government College, Ikot Ekpene, AKS, Nigeria",
     duration: {
       start: "September 2015",
