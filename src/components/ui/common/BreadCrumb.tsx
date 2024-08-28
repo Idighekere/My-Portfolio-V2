@@ -12,7 +12,7 @@ const BreadCrumb = ({ slug, title }: Props) => {
         <div>
 
             <span className="text-soft-white text-sm md:text-base flex gap-0 items-center justify-center mt-2">
-                <Link href={`/`}><Icon icon="iconamoon:home-light" width="26" height="26" /></Link>
+                <Link href={`/`}><Icon icon="iconamoon:home-light" width="22" height="22" /></Link>
                 <Icon icon="iconamoon:arrow-right-2-light" width="26" height="26" />
                 <Link href={`/projects`}>Projects</Link>
                 <Icon icon="iconamoon:arrow-right-2-light" width="26" height="26" />
