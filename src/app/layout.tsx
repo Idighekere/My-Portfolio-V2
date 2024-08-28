@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "../../public/fonts/fonts.css"
+import { Toaster } from "react-hot-toast";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Header from "@/components/ui/common/Header";
 import Footer from "@/components/ui/common/Footer";
@@ -32,8 +33,11 @@ export default function RootLayout({
 
         <Header />
         <MobileNav />
-        <div className={`px-5 md:px-20`}
+        <div 
+        // className={`px-5 md:px-20`}
         >
+          {/*   make sure to keep toaster above children */}
+        <Toaster position="top-center" />
           {children}
         </div>
         <Footer />

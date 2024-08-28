@@ -44,7 +44,7 @@ const Footer = (props: Props) => {
 
                 <div className='flex gap-2 justify-center md:justify-normal'>
                     {connectLinks.map((l) => (
-                        <Link href={l.link} key={l.link} className="bg-deep-blue  rounded-full hover:bg-primary-blue duration-250 .p-6 w-8 h-8  flex justify-center items-center">
+                        <Link href={l.link} key={l.link} className="hover:bg-deep-blue  rounded-full bg-transparent duration-250 p-3 w-10 h-10 flex justify-center items-center border-primary-blue text-primary-blue border">
                             <Icon icon={l.icon} width="24" height="24" className=" top-0 right-0 left-0" />
                         </Link>
                     ))}

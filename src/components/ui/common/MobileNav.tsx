@@ -16,7 +16,7 @@ const LinksMobile: LinkType[] = [
     {
         name: "Home",
         url: "/",
-        icon: "heroicons:home-20-solid",
+        icon: "iconamoon:home-light",
     },
     // {
     //     name: "About",
@@ -27,7 +27,8 @@ const LinksMobile: LinkType[] = [
     {
         name: "Projects",
         url: "/projects",
-        icon: "heroicons:folder-20-solid",
+        icon: "hugeicons:briefcase-03",
+        // icon: "heroicons:folder-20-solid",
     },
     {
         name: "Qualifications",
@@ -42,7 +43,7 @@ const MobileNav = (props: Props) => {
     const iconColor = pathname
 
     return (
-        <div className="z-50 fixed bottom-5 left-0 right-0 mx-7 md:hidden">
+        <div className="z-50 fixed bottom-5 left-0 right-0 mx-7 md:hidden w-auto">
             <div className=" bg-background/70 backdrop-blur-md px-2 py-2 rounded-lg flex justify-around items-center gap-2">
                 {LinksMobile.map((link) => (
                     <span key={link.name} className={` //flex flex-col items-center gap-0`}>

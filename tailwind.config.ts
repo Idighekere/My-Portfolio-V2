@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "custom-gradient": "linear-gradient(to right, #3BF686, #4CA9FF)",
+        "text-gradient":"linear-gradient(to right,#ccd6f6,#fff, #ccd6f6)"
       },
       colors: {
         background: "#00021a",

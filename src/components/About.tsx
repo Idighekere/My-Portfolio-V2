@@ -36,26 +36,36 @@ const connectLinks: ConnectType[] = [
 
 const About = (props: Props) => {
     return (
-        <main>
-            <div className="flex gap-3 //items-center flex-col md:flex-row ">
-                <div className="flex gap-3 md:w-[60%] items-center flex-col md:flex-row">
-                    <div className="//bg-custom-gradient //p-1 rounded-full">
+        <main className="bg-secondary p-5 md:p-20">
+            <div className="flex justify-center">
+
+                                    <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">About Me</h2>
+            </div>
+            
+
+            <div className="/flex gap-3 //items-center flex-col md:flex-row mt-5">
+                <div className="flex gap-4 md:gap-7 lg:gap-20  //items-center md:items-normal flex-col md:flex-row-reverse justify-between">
+                    {/* <div clasName="flex w-full"> */}
+                        <div className=" relative h-64 md:h-72 w-full rounded-lg  ">
                         <Image
                             src={"/Idighekere.jpg"}
-                            height={200}
-                            width={200}
+                            fill
                             alt="Idighekere Udo"
-                            className="rounded-full  max-w-[250px] filter grayscale border-deep-blue border-8 hidden md:block"
+                            className="rounded-md max-w-[250px] md:max-w-[350px] filter grayscale hover:grayscale-0   mx-auto border-soft-white/50 border-2"
                         />
-                    </div>
-                    <div>
-                        <h2 className="text-3xl font-[600] text-center mb-2 font-incognito text-soft-white">About Me</h2>
-                        <p className="text-grey">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Necessitatibus, nesciunt facere. Veniam, facilis temporibus
-                            ullam sequi inventore dicta debitis, odio voluptatibus fugit
-                            aliquid quaerat ea.
-                        </p>
+                        <div className="absolute bottom-0 left-0 m-auto w-full right-0">
+                            <a href={""} className="">
+                                <button className={`px-4 py-1 //border border-soft-white/50 text-soft-white bg-bgd rounded-md flex items-center font-[400] gap-1`}><p>Resume</p> <Icon icon="hugeicons:download-05" width="26" height="26" /></button>
+                            </a>
+                        </div>
+                       </div>
+                    {/* </div> */}
+                    <div className="">
+                        <div className="text-grey flex flex-col gap-3">
+                            <p className="">I'm a self driven, dedicated developer specializing in the frontend-web development, currently pursuing a bachelors degree in computer engineering. I primarily work with web technologies like HTML, CSS, Tailwind CSS, ReactJS, NextJS. I also have little knowledge on Docker, NodeJs, MongoDb, ExpressJs.</p>
+                            <p className="">I create, manage, troubleshoot wordpress sites.</p>
+                            <p className="">I thrive in collaborative environments and I'm always eager to learn and improve myself</p>
+                        </div>
                     </div>
                 </div>
                 {/* <div>

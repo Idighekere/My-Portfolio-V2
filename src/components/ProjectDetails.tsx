@@ -17,7 +17,7 @@ const ProjectDetails = ({ project }: Props) => {
                 <BreadCrumb title={project.title} slug={project.slug} />
                 <div key={project.id}>
 
-                    <div className="relative h-full sm:h-48 lg:h-72 pt-[56.25%] py-3">
+                    <div className="relative h-full sm:h-48 lg:h-72 pt-[56.25%] py-3 mt-3">
                         <Image src={project.imageUrl} alt={project.title} fill className="rounded-lg border-card-blue-shade/60 border-2" />
                     </div>
                     <h1 className="text-3xl font-[600] text-center my-3">{project.title}</h1>

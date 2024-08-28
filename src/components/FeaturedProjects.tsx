@@ -13,8 +13,12 @@ const FeaturedProjects = (props: Props) => {
     const FeaturedProjects = projectList.filter(project => project.isFeatured)
     // console.log(FeaturedProjects)
     return (
-        <section className="mt-20">
-            <h1 className="text-3xl font-[600] text-center mb-2 font-incognito text-soft-white">Featured Projects</h1>
+        <section className="mt-10 md:m-0 p-5 md:p-20 h-screen//">
+                        <div className="flex justify-center mb-8">
+
+            <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">Featured Projects</h2>
+                        </div>
+
 
 
             <div className="flex flex-col  gap-4">

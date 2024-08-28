@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <main >
             <div
-            // className={`px-10 md:px-20`}
+            className={`p-5 md:p-20`}
             >
 
 

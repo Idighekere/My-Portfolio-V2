@@ -30,8 +30,8 @@ const Links: LinkType[] = [
         icon: "heroicons:home-20-solid",
     },
     {
-        name: "Experience",
-        url: "/experience",
+        name: "Qualifications",
+        url: "/aualifications",
         icon: "heroicons:home-20-solid",
     },
 ];

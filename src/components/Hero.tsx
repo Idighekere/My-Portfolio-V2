@@ -40,12 +40,23 @@ const connectLinks: ConnectType[] = [
 const Hero = (props: Props) => {
     return (
         <>
-            <main className="hidden md:flex h-screen items-center/ /justify-between gap-20 py-8 md:py-20 ">
-                <div className=" md:pr-10">
-                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-[700] //-custom-gradient text-primary-blue bg-clip-text font-gitlab">
+            <main className="//hidden flex h-[80vh] md:h-screen items-center /justify-between //gap-20 p-5 md:p-20 ">
+                <div className=" md:pr-10 mt-0">
+                    <p className="text-primary-blue text-[1.125rem]">Hi👋, my name is</p>
+                    <h1 className="text-5xl md:text-6xl lg:text-8xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito">
                         Idighekere Udo
                     </h1>
-                    <p className="">Web Developer</p>
+                    <h3 className="text-3xl md:text-3xl lg:text-4xl font-[600] //-custom-gradient text-[#8892b0] bg-clip-text font-incognito">I'm  a Web Developer</h3>
+                    <p className="text-[1.125rem] text-[#8892b0]">I am glad to have you here. I am excited to connect & share my works with you.</p>
+                    <div>
+                        <p className="flex gap-3 py-3 text-primary-blue">
+                            {connectLinks.map((l) => (
+                                <Link href={l.link} key={l.link} className="hover:bg-deep-blue  rounded-full bg-transparent duration-350 p-3 w-10 h-10  flex justify-center items-center border-primary-blue border transition ease-in-out transition-translate hover:scale-[1.2]">
+                                    <Icon icon={l.icon} width="25" height="25" />
+                                </Link>
+                            ))}
+                        </p>
+                    </div>
                 </div>
                 {/* <div className="relative w-full h-64">
 
@@ -58,8 +69,8 @@ const Hero = (props: Props) => {
                 </div> */}
             </main>
             {/* <<==============MOBILE HERRRO===========>> */}
-            <div className="md:hidden flex flex-col /h-screen">
-                <div className="flex flex-col items-center justify-center mx-auto w-full">
+            <div className="hidden /flex flex-col h-screen justiy-center">
+                {/* <div className="flex flex-col items-center justify-center mx-auto w-full">
                     <div className=" relative h-64 w-full rounded-lg  ">
                         <Image
                             src={"/Idighekere.jpg"}
@@ -77,13 +88,15 @@ const Hero = (props: Props) => {
                             ))}
                         </p>
                     </div>
-                </div>
-                <div className="text-center py-5 mb-4">
-                    <h1 className="text-4xl md:text-5xl font-[600] //bg-custom-gradient text-primary-blue //bg-clip-text font-incognito">
+                </div> */}
+                <div className="text-center/ py-5 mb-4">
+                                        <p className="text-primary-blue">Hi👋, my name is</p>
+
+                    <h1 className="text-5xl md:text-5xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito">
                         Idighekere Udo
                         {/* a special human with some ability to love learning and working on teamwork.{" "} */}
                     </h1>
-                    <p className="text-xl">Web Developer</p>
+                    <h3 className="text-3xl md:text-3xl lg:text-4xl font-[600] //-custom-gradient text-[#8892b0] bg-clip-text font-incognito">I'm  a Web Developer</h3>
                 </div>
 
             </div>
