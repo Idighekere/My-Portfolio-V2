@@ -10,7 +10,7 @@ type Props = {
 
 const ProjectDetails = ({ project }: Props) => {
 
-    console.log(project)
+    // console.log(project)
     return (
         <main>
             <div>

@@ -9,17 +9,17 @@ type Props = {}
 
 interface FormState {
 
-    fullName: string;
-    email: string;
-    subject: string;
-    message: string;
+  fullName: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 const InitialState = {
 
-    fullName: "",
-    email: "",
-    subject: "",
-    message: ""
+  fullName: "",
+  email: "",
+  subject: "",
+  message: ""
 }
 
 export const smtpexpressClient = createClient({
@@ -28,60 +28,60 @@ export const smtpexpressClient = createClient({
 });
 const ContactMe = (props: Props) => {
 
-    const [formData, setFormData] = useState<FormState>(InitialState)
-    const [loading, setLoading] = useState<Boolean>(false)
-    // const [err, setErr]=useState("")
+  const [formData, setFormData] = useState<FormState>(InitialState)
+  const [loading, setLoading] = useState<boolean>(false)
+  // const [err, setErr]=useState("")
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }))
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+  // console.log(formData)
+  // console.log(process.env.NEXT_PUBLIC_PROJECT_SECRET)
+
+  //use Axios to make a POST request
+
+  const api = axios.create({
+    baseURL: "https://api.smtpexpress.com/",
+    headers: {
+
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.PROJECT_SECRET}`
     }
-    // console.log(formData)
-    // console.log(process.env.NEXT_PUBLIC_PROJECT_SECRET)
+  })
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
-    //use Axios to make a POST request
+    e.preventDefault()
+    setLoading(true)
 
-    const api = axios.create({
-        baseURL: "https://api.smtpexpress.com/",
-        headers: {
+    if (!formData.message || !formData.fullName) {
+      setLoading(false)
+      // setErr("field is required")
+      return;
+    }
+    // try {
+    //     const body = {
 
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.PROJECT_SECRET}`
-        }
-    })
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    //         subject: formData.subject,
+    //         message: `<h2>${formData.message}</h2> &nbsp; <p>${formData.email}</p>`,
+    //         sender: {
 
-        e.preventDefault()
-        setLoading(true)
+    //             name: formData.fullName,
+    //             email: "sm0pid-ae8zbl-uvZdQpm2BkrEt4Ca6G@projects.smtpexpress.com",
+    //         },
+    //         recipients: {
+    //             name: "Idighekere Udo",
+    //             email: "idighekereudo@gmail.com"
+    //         }
+    //     }
 
-        if (!formData.message || !formData.fullName) {
-            setLoading(false)
-            // setErr("field is required")
-            return;
-        }
-        // try {
-        //     const body = {
-
-        //         subject: formData.subject,
-        //         message: `<h2>${formData.message}</h2> &nbsp; <p>${formData.email}</p>`,
-        //         sender: {
-
-        //             name: formData.fullName,
-        //             email: "sm0pid-ae8zbl-uvZdQpm2BkrEt4Ca6G@projects.smtpexpress.com",
-        //         },
-        //         recipients: {
-        //             name: "Idighekere Udo",
-        //             email: "idighekereudo@gmail.com"
-        //         }
-        //     }
-
-        //     const response = await api.post("send", body)
-        //     console.log(response.data)
-        //     setLoading(false)
-        // } catch (error) {
-        //     console.error("Error sending email", error)
-        // }
-var template= `
+    //     const response = await api.post("send", body)
+    //     console.log(response.data)
+    //     setLoading(false)
+    // } catch (error) {
+    //     console.error("Error sending email", error)
+    // }
+    var template = `
            <div style="">
            <p style="padding:0px; margin:0;"><strong>Name: </strong>${formData.fullName}</p>
            <p style="padding:0px; margin:0;"><strong>Email: </strong>${formData.email}</p>
@@ -91,7 +91,7 @@ var template= `
             <p style="padding:0px; margin:0; ">${formData.message}</p>
             </div>
         `
-        try {
+    try {
       // Sending an email using SMTP
       await smtpexpressClient.sendApi.sendMail({
         // Subject of the email
@@ -113,16 +113,16 @@ var template= `
       });
 
       // Notify user of successful submission
-    //   alert("Please check your email to view the sent message.");
-    toast.success('Email sent')
+      //   alert("Please check your email to view the sent message.");
+      toast.success('Email sent')
       setLoading(false);
-        setFormData(InitialState)
+      setFormData(InitialState)
 
-      
+
     } catch (error) {
       // Notify user if an error occurs during submission
-    //   alert("Oops! Something went wrong. Please try again later.");
-    toast.error(`Submission failed: ${error.message}`)
+      //   alert("Oops! Something went wrong. Please try again later.");
+      toast.error(`Submission failed`)
       // You can console.log the error to know what went wrong
       console.log(error);
     } finally {
@@ -131,30 +131,32 @@ var template= `
     }
 
 
-    }
-    return (
-        <div className={`px-5 md:px-20`}>
-                      <div className="flex justify-center mb-5">
+  }
+  return (
+    <div className={`px-5 md:px-20`}>
+      <div className="flex justify-center mb-5">
 
-            <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">Contact Me</h2>
-                      </div>
+        <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">Contact Me</h2>
+      </div>
 
-            {/*  What */}
-            <form action="" onSubmit={handleSubmit} className="mt-3">
-                <div className="flex flex-col gap-3 w-full  md:items-center">
-                    <input type="text" name="fullName" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50" placeholder="Full Name" required value={formData.fullName} onChange={handleChange} />
-                    < input type="email" name="email" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Email Address" required value={formData.email} onChange={handleChange} />
-                    <input type="text" name="subject" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Subject" value={formData.subject} onChange={handleChange} />
-                    <textarea name="message" id="message" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
-                    <button className={`border border-primary-blue/80 bg-primary-blue/80 px-3 py-1 text-soft-white w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-transparent hover:border text-center ${loading ? "bg-disabled":""}`} disabled={loading} >{loading ? "Loading...": "Send Message"}</button>
+      {/*  What */}
+      <form action="" onSubmit={handleSubmit} className="mt-3">
+        <div className="flex flex-col gap-3 w-full  md:items-center">
+          <input type="text" name="fullName" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50" placeholder="Full Name" required value={formData.fullName} onChange={handleChange} />
+          < input type="email" name="email" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Email Address" required value={formData.email} onChange={handleChange} />
+          <input type="text" name="subject" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Subject" value={formData.subject} onChange={handleChange} />
+          <textarea name="message" id="message" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
+          <button className={`border border-primary-blue/80 bg-primary-blue/80 px-3 py-1 text-soft-white w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-transparent hover:border text-center ${loading ? "bg-disabled" : ""}`}
+            disabled={loading} 
+            >{loading ? "Loading..." : "Send Message"}</button>
 
-                </div>
+        </div>
 
-                {/* //TODO: */}
-            </form >
+        {/* //TODO: */}
+      </form >
 
-        </div >
-    )
+    </div >
+  )
 }
 
 export default ContactMe
