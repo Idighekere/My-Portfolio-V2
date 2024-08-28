@@ -62,9 +62,9 @@ const About = (props: Props) => {
                     {/* </div> */}
                     <div className="">
                         <div className="text-grey flex flex-col gap-3">
-                            <p className="">I'm a self driven, dedicated developer specializing in the frontend-web development, currently pursuing a bachelors degree in computer engineering. I primarily work with web technologies like HTML, CSS, Tailwind CSS, ReactJS, NextJS. I also have little knowledge on Docker, NodeJs, MongoDb, ExpressJs.</p>
+                            <p className="">I&apos;m a self driven, dedicated developer specializing in the frontend-web development, currently pursuing a bachelors degree in computer engineering. I primarily work with web technologies like HTML, CSS, Tailwind CSS, ReactJS, NextJS. I also have little knowledge on Docker, NodeJs, MongoDb, ExpressJs.</p>
                             <p className="">I create, manage, troubleshoot wordpress sites.</p>
-                            <p className="">I thrive in collaborative environments and I'm always eager to learn and improve myself</p>
+                            <p className="">I thrive in collaborative environments and I&apos;m always eager to learn and improve myself</p>
                         </div>
                     </div>
                 </div>

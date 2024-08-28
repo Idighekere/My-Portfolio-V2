@@ -46,7 +46,7 @@ const Hero = (props: Props) => {
                     <h1 className="text-5xl md:text-6xl lg:text-8xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito">
                         Idighekere Udo
                     </h1>
-                    <h3 className="text-3xl md:text-3xl lg:text-4xl font-[600] //-custom-gradient text-[#8892b0] bg-clip-text font-incognito">I'm  a Web Developer</h3>
+                    <h3 className="text-3xl md:text-3xl lg:text-4xl font-[600] //-custom-gradient text-[#8892b0] bg-clip-text font-incognito">I&apos;m  a Web Developer</h3>
                     <p className="text-[1.125rem] text-[#8892b0]">I am glad to have you here. I am excited to connect & share my works with you.</p>
                     <div>
                         <p className="flex gap-3 py-3 text-primary-blue">
