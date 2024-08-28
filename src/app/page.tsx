@@ -8,11 +8,11 @@ import ContactMe from "@/components/ContactMe";
 export default function MyApp() {
   return (
     <main>
-      <Hero className={`px-5 md:px-20`}/>
+      <Hero />
       <About />
-      <Skills className={`px-5 md:px-20`}/>
-      <FeaturedProjects className={`px-5 md:px-20`}/>
-      <ContactMe className={`px-5 md:px-20`}/>
+      <Skills />
+      <FeaturedProjects />
+      <ContactMe />
     </main>
 
   );
