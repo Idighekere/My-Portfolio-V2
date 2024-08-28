@@ -3,7 +3,7 @@ type duration = {
   end: string;
 };
 export type experienceType = {
-  id:string;
+  id: string;
   company: string;
   desc: string;
   role: string;
@@ -13,7 +13,7 @@ export type experienceType = {
 };
 export const experience: experienceType[] = [
   {
-    id:"1",
+    id: "1",
     company: "Google",
     desc: "Lorem ",
     role: "Frontend Developer",
@@ -24,11 +24,28 @@ export const experience: experienceType[] = [
     tasks: [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
       " Minus, voluptatem a rerum corporis fugit dolores!",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     ],
     logo: "",
   },
   {
-    id:"2",
+    id: "2",
+    company: "Google",
+    desc: "Lorem ",
+    role: "Frontend Developer",
+    duration: {
+      start: "January 2022",
+      end: "Present",
+    },
+    tasks: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      " Minus, voluptatem a rerum corporis fugit dolores!",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    ],
+    logo: "",
+  },
+  {
+    id: "3",
     company: "Waga",
     desc: "Lorem ",
     role: "Backend Developer",

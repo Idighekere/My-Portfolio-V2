@@ -181,6 +181,34 @@ export const projectList: projectType[] = [
       "In conclusionLorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
+    id: "7",
+    slug: "time-now-landing-page-clone",
+    title: "Time Now",
+    desc: ["A sport website for a sport brand, NPFL Updates", ""],
+    imageUrl: "/projects/time now/timenow-clone-idighs.netlify.app.jpeg",
+    images: ["", ""],
+    isFeatured: false,
+    stacks: ["HTML", "CSS", "Javascript"],
+    liveLink: "https://timenow-clone-idighs.netlify.app/",
+    codeLink: "https://github.com/Idighs14/Time-Now-Clone",
+
+    tasks: [],
+    category: "landing-page",
+    challenges: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    ],
+    solutions: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    ],
+    highlights: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    ],
+    conclusion: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
     id: "6",
     slug: "npfl-update-6",
     title: "Sport Blog",

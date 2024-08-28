@@ -56,7 +56,7 @@ const MobileNav = (props: Props) => {
     const iconColor = pathname
 
     return (
-        <div className="z-50 fixed bottom-5 left-0 right-0 mx-7 md:hidden w-auto">
+        <div className="z-50 fixed bottom-2 left-0 right-0 mx-6 md:hidden w-auto">
             <div className=" bg-background/70 backdrop-blur-md px-2 py-2 rounded-lg flex justify-around items-center gap-2">
                 {LinksMobile.map((link) => (
                     <span key={link.name} className={` //flex flex-col items-center gap-0`}>

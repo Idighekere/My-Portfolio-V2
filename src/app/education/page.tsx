@@ -25,7 +25,7 @@ const page = (props: Props) => {
                 <Experience xp={e} />
             </div>)
             )} */}
-            <div>
+            <div className="flex flex-col items-center">
                 <TimeLine />
                 {/* //edu={experience as educationType[]} */}
             </div>

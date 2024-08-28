@@ -36,7 +36,7 @@ const Links: LinkType[] = [
     },
     {
         name: "Education",
-        url: "/Education",
+        url: "/education",
         icon: "heroicons:home-20-solid",
     },
 ];

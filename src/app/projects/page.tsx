@@ -43,15 +43,11 @@ const tabsLists: tabsType[] = [
 
     },
     {
-        id: "wordpress-design",
-        title: "Wordpress Design",
+        id: "landing-page",
+        title: "Landing Pages",
 
     },
-    {
-        id: "wordpress-design",
-        title: "Wordpress Design",
 
-    },
 ]
 type Prop = {
     currentTab: string;
