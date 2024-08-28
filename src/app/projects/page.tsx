@@ -72,7 +72,10 @@ const Page = (props: any) => {
     const filteredProjects = currentTab === "all" ? projectList : projectList.filter(project => project.category === currentTab)
     return (
         <main>
-            <h1 className="text-3xl font-[600] text-center  font-incognito mb-7 text-soft-white">Projects</h1>
+            <div className="flex justify-center mb-8">
+
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">My Projects</h2>
+            </div>
 
             <div className="mb-5  ">
                 <span className="text-[.5rem] flex flex-col md:hidden"><Icon icon="octicon:arrow-both-24" width="26" height="26" /><p>Scroll</p></span>

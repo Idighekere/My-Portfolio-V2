@@ -36,7 +36,7 @@ body {
   background-color: #00021a;
   /* background-color: #061417; */
   color: #a8a9b4;
-  overflow-x:hidden;
+  overflow-x: hidden;
   /* font-family: "Gitlab_Mono", "Incognito_Fallback", sans-serif;
     font-optical-sizing: auto;
     font-style: normal; */
@@ -58,6 +58,13 @@ img:hover {
     /* hover:scale-110 transform transition-transform ease-in-out  */
     /* transit */
 }
+/* 
+.custom-list-disc::before {
+  content: "";
+  @apply absolute left-0 top-1/2 transform-translate bg-primary-blue rounded-full;
+  width: 10px;
+  height: 10px;
+} */
 
 @layer utilities {
   .text-balance {

@@ -30,8 +30,13 @@ const Links: LinkType[] = [
         icon: "heroicons:home-20-solid",
     },
     {
-        name: "Qualifications",
-        url: "/aualifications",
+        name: "Experience",
+        url: "/experience",
+        icon: "heroicons:home-20-solid",
+    },
+    {
+        name: "Education",
+        url: "/Education",
         icon: "heroicons:home-20-solid",
     },
 ];
@@ -45,7 +50,7 @@ const Header = (props: Props) => {
     // console.log(hash)
 
     return (
-        <header className="sticky top-0 backdrop-blur-md mb-6 px-10 md:px-20 z-50 shadow-md">
+        <header className="sticky top-0 backdrop-blur-md px-10 md:px-20 z-50 shadow-md">
             {/* <div className="relative h-auto"></div> */}
             <nav className="flex justify-between px-5 py-6">
                 <div>

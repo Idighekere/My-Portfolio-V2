@@ -5,6 +5,7 @@ type duration = {
     end: string;
 };
 type experience = {
+    id: string
     company: string;
     desc: string;
     duration: duration;
@@ -13,16 +14,21 @@ type experience = {
 };
 type Props = {}
 import { experience } from '@/data/experience'
+import TimeLine from '@/components/ui/TimeLine';
+import { experienceType } from '@/data/experience';
 const page = (props: Props) => {
     return (
-        <main>
-            <h2>Experience</h2>
-            {/* {experience.map(e => (<div key={e} >
+        <main className="p-3 md:p-20">
+            <div className="flex justify-center mb-8">
+
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">My Experience</h2>
+            </div>            {/* {experience.map(e => (<div key={e} >
                 <Experience xp={e} />
             </div>)
             )} */}
-            <Circle />
-            <Line />
+            <div>
+                <TimeLine xps={experience as experienceType[]} />
+            </div>
         </main>
     )
 }
@@ -31,25 +37,11 @@ const Experience = (props: Props) => {
     return (
         <div>
             <div className='flex '>
-                <Circle />
                 {/* <h2>{props.xp.company}</h2> */}
             </div>
         </div >
     )
 }
 
-const Circle = () => {
-
-    return (
-        <div className="rounded-full bg-white h-3 w-3"></div>
-    )
-}
-
-const Line = () => {
-
-    return (
-        <div className=" bg-white h-10 w-[2px]"></div>
-    )
-}
 
 export default page

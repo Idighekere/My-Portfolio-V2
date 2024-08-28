@@ -2,32 +2,44 @@ type duration = {
   start: string;
   end: string;
 };
-type experience = {
+export type experienceType = {
+  id:string;
   company: string;
   desc: string;
+  role: string;
   duration: duration;
   tasks: string[];
   logo?: string;
 };
-export const experience: experience[] = [
+export const experience: experienceType[] = [
   {
+    id:"1",
     company: "Google",
     desc: "Lorem ",
+    role: "Frontend Developer",
     duration: {
       start: "January 2022",
       end: "Present",
     },
-    tasks: [""],
+    tasks: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      " Minus, voluptatem a rerum corporis fugit dolores!",
+    ],
     logo: "",
   },
   {
+    id:"2",
     company: "Waga",
     desc: "Lorem ",
+    role: "Backend Developer",
     duration: {
       start: "March 2024",
       end: "June 2024",
     },
-    tasks: [""],
+    tasks: [
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      " Minus, voluptatem a rerum corporis fugit dolores!",
+    ],
     logo: "",
   },
 ];

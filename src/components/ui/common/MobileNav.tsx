@@ -10,30 +10,43 @@ type Props = {}
 type LinkType = {
     name: string;
     url: string;
-    icon?: string | IconifyIcon;
+    defaultIcon?: string | IconifyIcon;
+    activeIcon?: string | IconifyIcon;
 };
 const LinksMobile: LinkType[] = [
     {
         name: "Home",
         url: "/",
-        icon: "iconamoon:home-light",
+        defaultIcon: "iconamoon:home-light",
+        activeIcon: "iconamoon:home-fill"
     },
     // {
     //     name: "About",
     //     url: "/#about",
-    //     icon: "heroicons:home-20-solid",
+    //     defaultIcon: "heroicons:home-20-solid",
+    //     activeIcon: "iconamoon:home-fill"
+
     // },
 
     {
         name: "Projects",
         url: "/projects",
-        icon: "hugeicons:briefcase-03",
-        // icon: "heroicons:folder-20-solid",
+        defaultIcon: "ion:cube-outline",
+        activeIcon: "ion:cube",
     },
     {
-        name: "Qualifications",
-        url: "/qualifications",
-        icon: "mdi:medal",
+        name: "Experience",
+        url: "/experience",
+        defaultIcon: "heroicons:briefcase",
+        activeIcon: "heroicons:briefcase-solid",
+
+    },
+    {
+        name: "Education",
+        url: "/education",
+        defaultIcon: "streamline:quality-education",
+        activeIcon: "streamline:quality-education-solid",
+
     },
 ];
 const MobileNav = (props: Props) => {
@@ -49,7 +62,8 @@ const MobileNav = (props: Props) => {
                     <span key={link.name} className={` //flex flex-col items-center gap-0`}>
                         <Link href={link.url} className=" flex flex-col items-center gap-0">
                             <span className={` ${pathname === link.url ? "  text-primary-blue" : ""} `}>
-                                <Icon icon={link?.icon as string | IconifyIcon} width="22" height="22" /></span>
+                                {pathname === link.url ? <Icon icon={link?.activeIcon as string | IconifyIcon} width="22" height="22" /> : <Icon icon={link?.defaultIcon as string | IconifyIcon} width="22" height="22" />}
+                            </span>
                             <p className={`text-sm mt-0 ${pathname === link.url ? " font-[600] text-primary-blue" : ""}`}>{link.name}</p>
                         </Link>
                     </span>
