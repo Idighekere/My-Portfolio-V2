@@ -90,7 +90,7 @@ const Hero = (props: Props) => {
                     </div>
                 </div> */}
                 <div className="text-center/ py-5 mb-4">
-                                        <p className="text-primary-blue">Hi👋, my name is</p>
+                    <p className="text-primary-blue">Hi👋, my name is</p>
 
                     <h1 className="text-5xl md:text-5xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito">
                         Idighekere Udo
