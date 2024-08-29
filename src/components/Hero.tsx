@@ -41,9 +41,9 @@ const Hero = (props: Props) => {
     return (
         <>
             <main className="//hidden flex h-[80vh] md:h-screen items-center /justify-between //gap-20 p-5 md:p-20 ">
-                <div className=" md:pr-10 mt-0">
+                <div className=" md:pr-10 mt-0" data-aos="fade-right">
                     <p className="text-primary-blue text-[1.125rem]">Hi👋, my name is</p>
-                    <h1 className="text-5xl md:text-6xl lg:text-8xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito">
+                    <h1 className="text-5xl md:text-6xl lg:text-8xl font-[600] bg-text-gradient text-transparent bg-clip-text font-incognito" data-aos="flip-up">
                         Idighekere Udo
                     </h1>
                     <h3 className="text-3xl md:text-3xl lg:text-4xl font-[600] //-custom-gradient text-[#8892b0] bg-clip-text font-incognito">I&apos;m  a Web Developer</h3>

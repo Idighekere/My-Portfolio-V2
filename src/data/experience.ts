@@ -14,17 +14,17 @@ export type experienceType = {
 export const experience: experienceType[] = [
   {
     id: "1",
-    company: "Google",
+    company: "NPFL Update",
     desc: "Lorem ",
-    role: "Frontend Developer",
+    role: "Wordpress Developer",
     duration: {
       start: "January 2022",
       end: "Present",
     },
     tasks: [
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-      " Minus, voluptatem a rerum corporis fugit dolores!",
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      "Created a fully functional and visually appealing sports website using WordPress, tailored to the organization’s needs.",
+      "Regularly update and manage the website to ensure smooth operation",
+      "Identify and resolve any issues that arise, from plugin conflicts to server errors, ensuring minimal downtime.",
     ],
     logo: "",
   },

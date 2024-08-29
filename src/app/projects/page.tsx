@@ -38,6 +38,11 @@ const tabsLists: tabsType[] = [
 
     },
     {
+        id: "frontend",
+        title: "Frontend",
+
+    },
+    {
         id: "wordpress-design",
         title: "Wordpress Design",
 
