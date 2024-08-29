@@ -8,9 +8,9 @@ type Props = {
 };
 
 const ShareIcons = ({ shareLink, shareTitle }: Props) => {
-    console.log(JSON.stringify(shareLink))
-    console.log(shareLink)
-
+    //console.log(JSON.stringify(shareLink))
+    //console.log(shareLink)
+const shareMessage = `Checkout this project: ${shareTitle} - ${shareLink}`
     return (
         <div>
             <div className="flex flex-wrap gap-4">
@@ -29,7 +29,11 @@ const ShareIcons = ({ shareLink, shareTitle }: Props) => {
                 >
                     <Icon icon="logos:facebook" width="26" height="26" />
                 </a>
-                <a href={`/`} target="_blank" rel="noopener noreferrer">
+                <a   href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+          shareMessage
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer">
                     <Icon icon="logos:whatsapp-icon" width="26" height="26" />
                 </a>
                 <a

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "../../public/fonts/fonts.css"
 import { Toaster } from "react-hot-toast";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
+// import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Header from "@/components/ui/common/Header";
 import Footer from "@/components/ui/common/Footer";
 import MobileNav from "@/components/ui/common/MobileNav";
@@ -18,6 +18,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Idighekere Udo",
   description: "A web developer with knowledge in technologies like HTML, CSS,Tailwind CSS, ReactJS, NextJS, Wordpress etc",
+    openGraph: {
+    images: 'https://res.cloudinary.com/dyouxzxab/image/upload/v1724932857/idighekere-udo.brimble.app_wfwfim.jpg',
+  },
 };
 
 export default function RootLayout({

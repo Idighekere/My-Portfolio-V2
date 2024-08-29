@@ -52,14 +52,16 @@ const Header = (props: Props) => {
     return (
         <header className="sticky top-0 backdrop-blur-md px-10 md:px-20 z-50 shadow-md">
             {/* <div className="relative h-auto"></div> */}
-            <nav className="flex justify-between px-5 py-6">
+            <nav className="flex justify-between px-5 py-6 text-soft-white">
                 <div>
-                    <p className="text-white font-[700] text-xl text-center md:text-normal">
+                    <p className="font-gitlab font-[700] text-xl text-center md:text-normal">
                         {`<Idighs/>✨`}
                     </p>
                 </div>
                 <div className="block md:hidden">
+                    <Link href="https://github.com/idighekere/">
                     <Icon icon="akar-icons:github-fill" width="30" height="30" />
+                    </Link>
                 </div>
                 <div className="hidden md:flex">
                     {Links.map((link) => (
