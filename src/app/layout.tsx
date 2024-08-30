@@ -23,8 +23,7 @@ export const metadata: Metadata = {
     title:'Idighekere Udo',
     description: "A web developer with knowledge in various web technologies.",
     images: 'https://res.cloudinary.com/dyouxzxab/image/upload/v1724932857/idighekere-udo.brimble.app_wfwfim.jpg',
-    alt: "Idighekere Udo's Portfolio Image", // An optional alt text for the image
-  },
+    },
 };
 
 export default function RootLayout({
