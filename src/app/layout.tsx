@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   title: "Idighekere Udo",
   description: "A web developer with knowledge in technologies like HTML, CSS,Tailwind CSS, ReactJS, NextJS, Wordpress etc",
     openGraph: {
+    title:'Idighekere Udo'
+    description: "A web developer with knowledge in various web technologies.",
     images: 'https://res.cloudinary.com/dyouxzxab/image/upload/v1724932857/idighekere-udo.brimble.app_wfwfim.jpg',
+    width: 1200, // Desired width
+    height: 630,  // Desired height
+    alt: "Idighekere Udo's Portfolio Image", // An optional alt text for the image
   },
 };
 
