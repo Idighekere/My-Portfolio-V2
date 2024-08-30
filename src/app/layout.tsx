@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -22,8 +23,6 @@ export const metadata: Metadata = {
     title:'Idighekere Udo',
     description: "A web developer with knowledge in various web technologies.",
     images: 'https://res.cloudinary.com/dyouxzxab/image/upload/v1724932857/idighekere-udo.brimble.app_wfwfim.jpg',
-    width: 1200, // Desired width
-    height: 630,  // Desired height
     alt: "Idighekere Udo's Portfolio Image", // An optional alt text for the image
   },
 };
@@ -35,6 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta property="og:title" content="Idighekere Udo" />
+        <meta property="og:description" content="A web developer with knowledge in various web technologies." />
+        <meta property="og:image" content="https://res.cloudinary.com/dyouxzxab/image/upload/v1724932857/idighekere-udo.brimble.app_wfwfim.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="/" />
+        <meta property="og:type" content="website" />
+      </Head>
       <body
         className={inter.className}
       >
