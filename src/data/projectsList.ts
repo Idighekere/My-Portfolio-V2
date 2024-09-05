@@ -133,7 +133,7 @@ export const projectList: projectType[] = [
     isFeatured: false,
     stacks: ["ReactJS", "Tailwind"],
     liveLink: "https://idighekere-udo-v2.netlify.app",
-    codeLink: "https://willbethere.netlify.app",
+    codeLink: "https://github.com/Idighekere/My-Portfolio-V2",
     tasks: [],
     category: "frontend",
     challenges: [
@@ -167,7 +167,7 @@ export const projectList: projectType[] = [
     isFeatured: false,
     stacks: ["ReactJS", "Tailwind"],
     liveLink: "https://joshua-udom.brimble.app",
-    codeLink: "https://willbethere.netlify.app",
+    codeLink: "https://github.com/Idighekere/Joshua-Udom",
     tasks: [],
     category: "frontend",
     challenges: [
@@ -226,7 +226,7 @@ export const projectList: projectType[] = [
     isFeatured: false,
     stacks: ["HTML", "CSS", "Javascript"],
     liveLink: "https://chirp-landing-page-idighs.netlify.app/",
-    codeLink: "https://github.com/Idighs14/Chirp-Landing-Page-Clone",
+    codeLink: "https://github.com/Idighekere/Chirp-Landing-Page-Clone",
 
     tasks: [],
     category: "landing-page",
@@ -256,7 +256,7 @@ export const projectList: projectType[] = [
     isFeatured: false,
     stacks: ["HTML", "CSS", "Javascript"],
     liveLink: "https://snipper-landing-page-clone.netlify.app/",
-    codeLink: "https://github.com/Idighs14/Snipper-Landing-Page",
+    codeLink: "https://github.com/Idighekere/Snipper-Landing-Page",
 
     tasks: [],
     category: "landing-page",
@@ -280,7 +280,7 @@ export const projectList: projectType[] = [
     isFeatured: false,
     stacks: ["HTML", "CSS", "Javascript"],
     liveLink: "https://timenow-clone-idighs.netlify.app/",
-    codeLink: "https://github.com/Idighs14/Time-Now-Clone",
+    codeLink: "https://github.com/Idighekere/Time-Now-Clone",
 
     tasks: [],
     category: "landing-page",
