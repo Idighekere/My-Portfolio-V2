@@ -136,7 +136,7 @@ const ContactMe = (props: Props) => {
     <div className={`px-5 md:px-20`}>
       <div className="flex justify-center mb-5">
 
-        <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">Contact Me</h2>
+        <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">CONTACT ME</h2>
       </div>
 
       {/*  What */}
@@ -147,8 +147,8 @@ const ContactMe = (props: Props) => {
           <input type="text" name="subject" id="" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Subject" value={formData.subject} onChange={handleChange} />
           <textarea name="message" id="message" className="bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
           <button className={`border border-primary-blue/80 bg-primary-blue/80 px-3 py-1 text-soft-white w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-transparent hover:border text-center ${loading ? "bg-disabled" : ""}`}
-            disabled={loading} 
-            >{loading ? "Loading..." : "Send Message"}</button>
+            disabled={loading}
+          >{loading ? "Loading..." : "Send Message"}</button>
 
         </div>
 

@@ -75,7 +75,7 @@ const Page = (props: any) => {
         <main>
             <div className="flex justify-center mb-8">
 
-                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">My Projects</h2>
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">MY PROJECTS</h2>
             </div>
 
             <div className="mb-5  ">

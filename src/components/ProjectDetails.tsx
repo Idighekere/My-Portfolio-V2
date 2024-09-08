@@ -64,7 +64,7 @@ const ProjectDetails = ({ project }: Props) => {
                                 </span>
                             ))}
                         </div>
-                        <h2 className="mt-5 font-[600] text-xl">Key Features</h2>
+                        <h2 className="mt-5 font-[600] text-2xl">Key Features</h2>
                         <ul className="px-2 list-disc list-inside">
                             {project?.highlights!.map((highlight) => (
                                 <li key={highlight} className="">{highlight}</li>
@@ -72,7 +72,7 @@ const ProjectDetails = ({ project }: Props) => {
                         </ul>
                         <div className="flex md:flex-row flex-col mt-5 gap-5">
                             {project?.challenges!.length > 0 && <div className="">
-                                <h2 className="font-[600] text-xl">Challenges</h2>
+                                <h2 className="font-[600] text-2xl">Challenges</h2>
                                 <p className="">
                                     These are the challenges I faced while working on this
                                     project
@@ -85,7 +85,7 @@ const ProjectDetails = ({ project }: Props) => {
                             </div>}
                             {project?.solutions!.length > 0 &&
                                 (<div className="">
-                                    <h2 className=" font-[600] text-xl">Solutions</h2>
+                                    <h2 className=" font-[600] text-2xl">Solutions</h2>
                                     <p className="">
                                         These are the approach I used to tackle the challenges I
                                         faced
@@ -101,19 +101,19 @@ const ProjectDetails = ({ project }: Props) => {
                         {/* IMAGE GALLERY */}
                         {project.images.length > 1 && (<div>
 
-                            <h2 className=" font-[600] text-xl mt-4">Screens</h2>
+                            <h2 className=" font-[600] text-2xl mt-4">Screens</h2>
 
                             <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-x-auto w-full">
                                 {project.images.map(image => (<div key={`${image}-${image.length + 1}`} className="relative /w-full h-64 /sm:h-48 /lg:h-72 /pt-[56.25%] py-3 "><Image src={image} alt={image} fill className="rounded-md w-auto h-auto object-cover" sizes="100vw"
                                 /></div>))}
                             </div>
                         </div>)}
-                        <h2 className="mt-5 font-[600] text-xl">Conclusion</h2>
+                        <h2 className="mt-5 font-[600] text-2xl">Conclusion</h2>
                         <p className="">{project.conclusion}</p>
                     </article>
                 </div>
                 <div className="flex justify-center mb-2 flex-col mt-5">
-                    <h4 className="text-xl font-[600]">Share:</h4>
+                    <h4 className="text-2xl font-[600]">Share:</h4>
                     <p></p>
                     <ShareIcons shareLink={project.slug} shareTitle={project.title} />
                 </div>            </div >

@@ -39,32 +39,32 @@ const About = (props: Props) => {
         <main className="bg-secondary p-5 md:p-20">
             <div className="flex justify-center">
 
-                                    <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">About Me</h2>
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">ABOUT ME</h2>
             </div>
-            
+
 
             <div className="/flex gap-3 //items-center flex-col md:flex-row mt-5">
                 <div className="flex gap-4 md:gap-7 lg:gap-20  //items-center md:items-normal flex-col md:flex-row-reverse justify-between">
                     {/* <div clasName="flex w-full"> */}
-                        <div className=" relative h-64 md:h-72 w-full rounded-lg  " data-aos="flip-up">
+                    <div className=" relative h-64 md:h-72 w-full rounded-lg  " data-aos="flip-up">
                         <Image
                             src={"/Idighekere.jpg"}
                             fill
                             alt="Idighekere Udo"
-                            className="rounded-md max-w-[250px] md:max-w-[350px] filter grayscale hover:grayscale-0   mx-auto border-soft-white/50 border-2"
+                            className="rounded-md max-w-[250px] md:max-w-[350px] filter grayscale hover:grayscale-0   mx-auto border-primary-blue border-2"
                         />
-                       
-                       </div>
+
+                    </div>
                     {/* </div> */}
                     <div className="">
-                        <div className="text-grey flex flex-col gap-3" data-aos="fade-up">
+                        <div className="text-soft-white flex flex-col gap-3" data-aos="fade-up">
                             <p className="">I&apos;m a self driven, dedicated developer specializing in the frontend-web development, currently pursuing a bachelors degree in computer engineering. I primarily work with web technologies like HTML, CSS, Tailwind CSS, ReactJS, NextJS. I also have little knowledge on Docker, NodeJs, MongoDb, ExpressJs.</p>
                             <p className="">I create, manage, troubleshoot wordpress sites.</p>
                             <p className="">I thrive in collaborative environments and I&apos;m always eager to learn and improve myself</p>
                         </div>
-                         <div className=" m-auto w-full mt-5 ">
+                        <div className=" m-auto w-full mt-5 ">
                             <a href={""} className="">
-                                <button className={`px-4 py-1 border border-primary-blue 50 text-primary-blue bg-bgd  rounded-md flex items-center font-[400] gap-1`}><p>Resume</p> <Icon icon="hugeicons:download-05" width="26" height="26" /></button>
+                                <button className={`px-4 py-1 border border-primary-blue 50 text-soft-white bg-primary-blue  rounded-md flex items-center font-[400] gap-1`}><p>Resume</p> <Icon icon="hugeicons:download-05" width="26" height="26" /></button>
                             </a>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const About = (props: Props) => {
             <div className="/flex gap-3 items-center flex-col md:flex-row hidden">
                 <div>
                     <h2 className="text-xl font-[600] text-center text-soft-white">ABOUT ME</h2>
-                    <p className="text-grey">
+                    <p className="text-light-blue">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Necessitatibus, nesciunt facere. Veniam, facilis temporibus ullam
                         sequi inventore dicta debitis, odio voluptatibus fugit aliquid

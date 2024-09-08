@@ -14,10 +14,10 @@ const FeaturedProjects = (props: Props) => {
     // console.log(FeaturedProjects)
     return (
         <section className="mt-10 md:m-0 p-5 md:p-20 h-screen//">
-                        <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8">
 
-            <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">Featured Projects</h2>
-                        </div>
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">FEATURED PROJECTS</h2>
+            </div>
 
 
 

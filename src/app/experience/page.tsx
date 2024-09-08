@@ -29,7 +29,7 @@ const Experience = (props: Props) => {
         <main className="p-3 md:p-20 ">
             <div className="flex justify-center mb-8">
 
-                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">My Experience</h2>
+                <h2 className="text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue ">MY EXPERIENCE</h2>
             </div>
             <div className="flex flex-col items-center w-full">
                 <TimeLine />

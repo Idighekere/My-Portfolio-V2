@@ -58,7 +58,7 @@ const Skills = (props: Props) => {
     return (
         <section className='mt-10 p-5 md:p-20'>
             <div className="flex justify-center mb-5">
-                <h2 className='text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue '>My Skills</h2>
+                <h2 className='text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue '>MY SKILLS</h2>
 
             </div>
 
@@ -67,7 +67,7 @@ const Skills = (props: Props) => {
                 {/* <div className='md:w-1/2 hidden'>
                     <h1 className='text-4xl font-[600] text-center //mb-6 font-incognito text-soft-white border-b-4 inline-block border-primary-blue '>My Skills</h1>
 
-                    <p className="text-grey">What I work with</p>
+                    <p className="text-light-blue">What I work with</p>
 
                 </div> */}
                 <div className="rounded-lg bg-secondary /flex j/ustify-center mx-auto w-full md:w-[80%] //md:w-1/2">
