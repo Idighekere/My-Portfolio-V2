@@ -33,20 +33,23 @@ export const getProjectBySlug = async ({ slug }: { slug: string }) => {
   //   )
 
   const fullPath = path.join(projectDirectory, `${slug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf-8')
-  const { data, content } = matter(fileContents)
+  if(fullPath){
 
-  const processedContent = await remark().use(remarkHtml).process(content)
-  const contentHtml = processedContent.toString()
+    const fileContents = fs?.readFileSync(fullPath, 'utf-8')
+    const { data, content } = matter(fileContents)
 
-  return {
-    slug,
-    content: contentHtml,
-    ...(data as Omit<Project, 'slug' | 'content'>)
+    const processedContent = await remark().use(remarkHtml).process(content)
+    const contentHtml = processedContent.toString()
+
+    return {
+      slug,
+      content: contentHtml,
+      ...(data as Omit<Project, 'slug' | 'content'>)
+    }
   }
-}
-//getAllProjectSlugs()
+  //getAllProjectSlugs()
 
+}
 export const getAllProjects = async (): Promise<Project[]> => {
   const fileNames = fs.readdirSync(projectDirectory)
 
@@ -89,7 +92,7 @@ export const getAllProjects = async (): Promise<Project[]> => {
 
 export async function getFeaturedProjects (): Promise<Project[]> {
   const allProjects = await getAllProjects()
-  const featuredProjects = allProjects.filter(project => project?.isFeatured)
+  const featuredProjects = allProjects?.filter(project => project?.isFeatured)
 
   return featuredProjects
 }
@@ -101,7 +104,7 @@ export async function getProjectsByCategory (
   //Promise<Project[]>
 
   const allProjects = await getAllProjects()
-  const filteredProjects=allProjects.filter(project => project?.category === category)
+  const filteredProjects=allProjects?.filter(project => project?.category === category)
 
   // console.log(filteredProjects)
   return {filteredProjects,allProjects}
