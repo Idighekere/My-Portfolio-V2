@@ -1,3 +1,7 @@
 [build]
-  command = "next build"
-  publish = ".next"
+    command = "next build"
+    publish = ".next"
+
+[function]
+    node_bundler="esbuild"
+    included_files=["/src/contents/projects*.md"]
