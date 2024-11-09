@@ -2,7 +2,7 @@ type duration = {
   start: string;
   end: string;
 };
-export type educationType = {
+export type EducationType = {
   id: string;
   degree: string;
   desc: string;
@@ -12,7 +12,7 @@ export type educationType = {
   //   tasks: string[];
   logo?: string;
 };
-export const education: educationType[] = [
+export const education: EducationType[] = [
   {
     id: "1",
     degree: "Bachelor of Engineering",
@@ -28,7 +28,8 @@ export const education: educationType[] = [
   {
     id: "2",
     degree: "WASSCE & NECO",
-    desc: "SSS1-SSS3: Senior school certificate obtained. (West African Secondary School Certificate).",
+
+    desc: "SSS1-SSS3: Senior school certificate obtained. (West African Secondary School Certificate). ",
     school: "African Christian Sec. Sch. Usung Atiat",
     duration: {
       start: "September 2018",

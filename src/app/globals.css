@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root,
 #root,
 #docs-root {
@@ -32,7 +31,6 @@
 }
 
 body {
-
   background-color: #00021a;
   /* background-color: #061417; */
   color: #ccd6f6;
@@ -42,26 +40,25 @@ body {
     font-style: normal; */
 }
 
-h1,
+/* h1,
 h2 {
   font-family: "Incognito", "Incognito_Fallback", sans-serif;
-}
+} */
 
 img {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-
 img:hover {
-  transform: scale(1.02) translateY(-5)
-    /* hover:scale-110 transform transition-transform ease-in-out  */
-    /* transit */
+  transform: scale(1.02) translateY(-5);
+  /* hover:scale-110 transform transition-transform ease-in-out  */
+  /* transit */
 }
-/* 
+/*
 .custom-list-disc::before {
   content: "";
-  @apply absolute left-0 top-1/2 transform-translate bg-primary-blue rounded-full;
+  @apply absolute left-0 rounded-full top-1/2 transform-translate bg-primary-blue;
   width: 10px;
   height: 10px;
 } */
@@ -70,4 +67,43 @@ img:hover {
   .text-balance {
     text-wrap: balance;
   }
+}
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  20%,
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+  45%,
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+  70%,
+  75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+  95%,
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.animate-spin988 {
+  animation: spin988 2s linear infinite;
+}
+
+/* MARKDOWN SPECIFIC STYLING */
+.parsedown h1 {
+  @apply mt-8 text-3xl font-bold;
+}
+.parsedown h2 {
+  @apply text-2xl font-semibold;
+}
+.parsedown h3 {
+  @apply text-xl font-semibold;
+}
+.parsedown ul {
+  @apply list-disc list-inside
 }

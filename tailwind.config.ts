@@ -53,6 +53,10 @@ const config: Config = {
         incognito: ["Incognito", "Incognito_Fallback"],
         gitlab: ["Gitlab_Mono", "Gitlab_Mono_Fallback"],
       },
+       animation: {
+                bounce200: 'bounce 1s infinite 200ms',
+                bounce400: 'bounce 1s infinite 400ms',
+            },
     },
   },
   plugins: [],

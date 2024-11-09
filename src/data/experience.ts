@@ -1,17 +1,6 @@
-type duration = {
-  start: string;
-  end: string;
-};
-export type experienceType = {
-  id: string;
-  company: string;
-  desc: string;
-  role: string;
-  duration: duration;
-  tasks: string[];
-  logo?: string;
-};
-export const experience: experienceType[] = [
+import { ExperienceType } from "@/types";
+
+export const experience: ExperienceType[] = [
   {
     id: "1",
     company: "NPFL Update",
@@ -30,8 +19,8 @@ export const experience: experienceType[] = [
   },
   // {
   //   id: "2",
-  //   company: "Google",
-  //   desc: "Lorem ",
+  //   company: "ACES - UNIUYO Chapter",
+  //   desc: "ACES - Association of Computer Engineering Students ",
   //   role: "Frontend Developer",
   //   duration: {
   //     start: "January 2022",

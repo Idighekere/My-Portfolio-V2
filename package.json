@@ -14,10 +14,13 @@
     "@radix-ui/react-tooltip": "^1.1.2",
     "aos": "^3.0.0-beta.6",
     "axios": "^1.7.5",
+    "gray-matter": "^4.0.3",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "smtpexpress": "^0.0.14"
   },
   "devDependencies": {

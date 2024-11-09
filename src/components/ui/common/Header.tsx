@@ -43,20 +43,20 @@ const Links: LinkType[] = [
 
 const Header = (props: Props) => {
     const pathname = usePathname();
-    console.log(pathname);
+    // console.log(pathname);
     const router = useRouter();
     // const hash = router.asPath.split('#')[1];
 
     // console.log(hash)
 
     return (
-        <header className="sticky top-0 backdrop-blur-md px-10 md:px-20 z-50 shadow-md">
+        <header className="sticky top-0 z-50 px-10 shadow-md backdrop-blur-md md:px-20">
             {/* <div className="relative h-auto"></div> */}
-            <nav className="flex justify-between px-5 py-6 text-soft-white">
+            <nav className="flex justify-between py-6 /px-5 text-soft-white">
                 <div>
-                    <p className="font-gitlab font-[700] text-xl text-center md:text-normal">
+                    <a href="/" className="font-incognito font-[700] text-2xl text-center md:text-normal">
                         {`<Idighs/>✨`}
-                    </p>
+                    </a>
                 </div>
                 <div className="block md:hidden">
                     <Link href="https://github.com/idighekere/">
@@ -65,7 +65,7 @@ const Header = (props: Props) => {
                 </div>
                 <div className="hidden md:flex">
                     {Links.map((link) => (
-                        <span key={link.name} className={` px-4 py-1  ${pathname === link.url ? "font-[600] text-primary-blue" : "text-soft-white font-[400]"} hover:border-b-2 hover:border-primary-blue`}>
+                        <span key={link.name} className={` px-4 py-1  ${pathname === link.url ? "font-[600] text-primary-blue" : "text-soft-white font-[400]"} hover:border hover:border-primary-blue rounded-full`}>
                             <Link href={link.url}>{link.name}</Link>
                         </span>
                     ))}
