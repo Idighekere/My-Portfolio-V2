@@ -5,8 +5,17 @@ import remarkHtml from 'remark-html'
 import grayMatter from 'gray-matter'
 import remarkParse from 'remark-parse'
 import { unified } from 'unified'
+import remarkImages from 'remark-images'
 
 // This function reads the markdown content, parses front matter, and converts markdown to HTML
+/* //TODO - I'm gonna comeback to organise the markdown into folders.
+  - using the structure
+  ├── will-be-there/
+│   ├── index.md
+│   └── images/
+│       └── will-be-there.png
+
+*/
 
 export const parseMD = async (filePath:string) => {
 
@@ -21,8 +30,8 @@ export const parseMD = async (filePath:string) => {
  // console.log("content",content)
   //Convert markdown content to HTML using remark
   const file = await remark()
-  .use(remarkHtml) // Converts Markdown to HTML
-  .process(content)  //Process markdown content
+  .use(remarkHtml).use(remarkImages as any).process(content)// Converts Markdown to HTML
+    //Process markdown content
 
 // const file = await unified()
 //   .use(remarkParse) // Parse markdown content to a syntax tree

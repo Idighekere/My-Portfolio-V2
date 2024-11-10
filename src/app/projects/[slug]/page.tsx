@@ -102,8 +102,8 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
         codeLink={metadata.codeLink}
       />
 
-      <div className='mt-10'>
-        <p className='text-xl font-bold'>Share:</p>
+      <div className='mt-7'>
+        <p className=' font-[600] mb-2'><span className="text-xl font-[700]">Share:</span> Are you impressed and you wanna share?</p>
         <ShareIcons shareLink={metadata.slug} shareTitle={metadata.title} />
       </div>
     </main>

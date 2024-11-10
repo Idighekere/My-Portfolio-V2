@@ -13,17 +13,20 @@ codeLink: 'https://github.com/WillBeThere-24/frontend/'
 ---
 
 
-- An event planning web application designed to streamline the process of organizing events. A hackathon project worked on by a team of 8.
-- As part of a team of 8, including a project manager, UI/UX designers, and both frontend and backend developers, I contributed as a frontend developer.
+An event planning web application designed to streamline the process of organizing events. A hackathon project worked on by a team of 8.
+
+As part of a team of 8, including a project manager, UI/UX designers, and both frontend and backend developers, I contributed as a frontend developer.
 
 ## Gallery
-![iPhone-13-PRO-MAX]("/projects/project 1/iPhone-13-PRO-MAX-willbethere.netlify.app.png")
+<!-- ![iPhone-13-PRO-MAX](/public/projects/project 1/iPhone-13-PRO-MAX-willbethere.netlify.app.png)
 ![Galaxy-Tab-S7]( /projects/project 1/Galaxy-Tab-S7-willbethere.netlify.app.png)
-![Macbook-Air]( /projects/project 1/Macbook-Air-willbethere.netlify.app.png )
+![Macbook-Air]( /projects/project 1/Macbook-Air-willbethere.netlify.app.png ) -->
+_No Images Available_
+
 
 ## Tasks
-- Authentication and Authorization
-- User can create and update events
+- Contributed in building the event creation pages and components
+- Built header components and auth pages
 
 ## Challenges
 - Working under tight deadlines during the hackathon to deliver a fully functional MVP.

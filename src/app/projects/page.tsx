@@ -71,10 +71,11 @@ const Page = (props: any) => {
 
      // Check if category data is already in sessionStorage
   const cachedProjects = sessionStorage.getItem(currentTab);
+  const allProjectsCache=sessionStorage.getItem("all")
   if (cachedProjects) {
     const parsedProjects = JSON.parse(cachedProjects);
     setLoading(false);
-    setProjects(parsedProjects)
+    setProjects(JSON?.parse(allProjectsCache as string))
     setFilteredProjects(parsedProjects);
     return;
   }
@@ -87,7 +88,7 @@ const Page = (props: any) => {
       setProjects(allProjects)
       setFilteredProjects(filteredProjects)
       sessionStorage.setItem(currentTab, JSON.stringify(filteredProjects)) // Update sessionStorage with filtered projects
-      sessionStorage.setItem(currentTab, JSON.stringify(allProjects)) //Update sessionStorage with all projects
+      sessionStorage.setItem("all", JSON.stringify(allProjects)) //Update sessionStorage with all projects
 
     }
 
