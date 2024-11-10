@@ -9,7 +9,6 @@ import Link from 'next/link'
 import {SectionDescription, SectionTitle} from './ui/Title'
 import {
   getAllProjects,
-  getProjectBySlug,
   getFeaturedProjects,
   Project
 } from '@/lib/projects'

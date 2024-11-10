@@ -22,6 +22,10 @@ const tabsLists: tabsType[] = [
     title: 'All'
   },
   {
+id: 'fullstack',
+    title: 'FullStack'
+  },
+  {
     id: 'frontend',
     title: 'Frontend'
   },
@@ -61,6 +65,20 @@ const Page = (props: any) => {
 
   useEffect(() => {
     setLoading(true)
+
+    //NOTE - I opted for session storage because data was always being fetched from the file system every time a tab is clicked. So I stored each project of the tabs in sessionstorage so i would not have to load the data even when the tab was visited before.
+
+
+     // Check if category data is already in sessionStorage
+  const cachedProjects = sessionStorage.getItem(currentTab);
+  if (cachedProjects) {
+    const parsedProjects = JSON.parse(cachedProjects);
+    setLoading(false);
+    setProjects(parsedProjects)
+    setFilteredProjects(parsedProjects);
+    return;
+  }
+
     const loadProjects = async () => {
       const {filteredProjects,allProjects} = await getProjectsByCategory(currentTab)
       //const allProject = await getAllProjects()
@@ -68,6 +86,9 @@ const Page = (props: any) => {
       setLoading(false)
       setProjects(allProjects)
       setFilteredProjects(filteredProjects)
+      sessionStorage.setItem(currentTab, JSON.stringify(filteredProjects)) // Update sessionStorage with filtered projects
+      sessionStorage.setItem(currentTab, JSON.stringify(allProjects)) //Update sessionStorage with all projects
+
     }
 
     loadProjects()

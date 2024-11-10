@@ -1,16 +1,15 @@
 /** @type {import('next').NextConfig} */
+import withMDX from '@next/mdx';
+
 const nextConfig = {
-    reactStrictMode: true,
-// webpack: (config, { isServer }) => {
-
-//     // If client-side, don't polyfill `fs`
-//     if (!isServer) {
-//       config.resolve.fallback = {
-//         fs: false,
-//       };
-//     }
-// }
-
+  reactStrictMode: true,
+  // Add other Next.js configurations if necessary
 };
 
-export default nextConfig;
+export default withMDX({
+  extension: /\.mdx?$/,
+
+})({
+  ...nextConfig,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+});

@@ -10,7 +10,7 @@ stacks:
   - 'Tailwind'
   - 'Supabase'
   - 'Gemini AI'
-category: 'web development'
+category: 'fullstack'
 liveLink: 'https://vantage.acadeva.xyz'
 codeLink: 'https://willbethere.netlify.app'
 ---

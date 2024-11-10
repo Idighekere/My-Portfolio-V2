@@ -6,8 +6,8 @@ description: 'An event planning web application designed to streamline the proce
 imageUrl: '/projects/willbethere.netlify.app.jpeg'
 isFeatured: true
 stacks:
-  ['ReactJS','Tailwind','HTML','CSS']
-category: 'frontend'
+  ['ReactJS','Tailwind','HTML','CSS',]
+category: 'fullstack'
 liveLink: 'https://willbethere.netlify.app'
 codeLink: 'https://github.com/WillBeThere-24/frontend/'
 ---

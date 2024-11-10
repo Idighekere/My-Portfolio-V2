@@ -48,7 +48,7 @@ export const generateStaticParams = async () => {
 const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
   //Fetch necessary data for the blog post using params.slug
 
-  const { slug } = params
+  const  slug = params?.slug
 
   if (!slug) {
     return { notFound: true } // Handle cases where no slug is found
@@ -62,6 +62,8 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
     'projects',
     `${slug}.md`
   )
+
+  //getProjectBySlug(slug as any)
 
   if (!fs.existsSync(fullPath)) {
     return <><NotFound/></> // Handle file not found error

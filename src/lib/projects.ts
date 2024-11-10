@@ -1,8 +1,8 @@
-import { metadata } from './../app/projects/layout';
 'use server'
+
 import path from 'path'
 import { parseMD } from './parseMD'
-import fs from 'fs'
+import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
@@ -22,47 +22,26 @@ export type Project = {
   content: string
 }
 
-const projectDirectory = path.join(process.cwd(), 'src', 'contents', 'projects')
-export const getProjectBySlug = async ({ slug }: { slug: string }) => {
-  //: Promise<Project>
-  //   const projectDirectory = path.join(
-  //     process.cwd(),
-  //     'src',
-  //     'contents',
-  //     'projects'
-  //   )
+const projectDirectory = path.join(process.cwd(), 'src/contents/projects')
+console.log('ProcessCwd', process.cwd())
+console.log(__dirname)
 
-  const fullPath = path.join(projectDirectory, `${slug}.md`)
-  if(fullPath){
 
-    const fileContents = fs?.readFileSync(fullPath, 'utf-8')
-    const { data, content } = matter(fileContents)
-
-    const processedContent = await remark().use(remarkHtml).process(content)
-    const contentHtml = processedContent.toString()
-
-    return {
-      slug,
-      content: contentHtml,
-      ...(data as Omit<Project, 'slug' | 'content'>)
-    }
-  }
-  //getAllProjectSlugs()
-
-}
 export const getAllProjects = async (): Promise<Project[]> => {
-  const fileNames = fs.readdirSync(projectDirectory)
+  const fileNames = fs.readdir(projectDirectory)
 
   // Parse each markdown file and get metadata
   const allProjects = await Promise.all(
-    fileNames.map(async filename => {
+    (
+      await fileNames
+    ).map(async filename => {
       const { metadata, content } = await parseMD(
         path.join('src', 'contents', 'projects', filename)
       )
       const slug = filename.replace(/\.md$/, '')
 
       //Promise.all() -  to handle multiple asynchronous operations concurrently, rather than sequentially,
-      getProjectBySlug(slug as any)
+      // getProjectBySlug(slug as any)
 
       const projectData: Project = {
         id: metadata.id,
@@ -76,18 +55,16 @@ export const getAllProjects = async (): Promise<Project[]> => {
         codeLink: metadata.codeLink,
         liveLink: metadata.liveLink,
         date: metadata.date,
-        content,
+        content
       }
-// console.log(metadata)
+      // console.log(metadata)
       return projectData
 
       // Combine metadata and content
     })
   )
 
-
   return allProjects.sort((a, b) => a.id - b.id)
-
 }
 
 export async function getFeaturedProjects (): Promise<Project[]> {
@@ -97,16 +74,44 @@ export async function getFeaturedProjects (): Promise<Project[]> {
   return featuredProjects
 }
 
-export async function getProjectsByCategory (
-  category: string
-) {
-
+export async function getProjectsByCategory (category: string) {
   //Promise<Project[]>
 
   const allProjects = await getAllProjects()
-  const filteredProjects=allProjects?.filter(project => project?.category === category)
+  const filteredProjects = allProjects?.filter(
+    project => project?.category === category
+  )
 
   // console.log(filteredProjects)
-  return {filteredProjects,allProjects}
-
+  return { filteredProjects, allProjects }
 }
+
+
+// export const getProjectBySlug = async ({ slug }: { slug: string }) => {
+//   //: Promise<Project>
+//   //   const projectDirectory = path.join(
+//   //     process.cwd(),
+//   //     'src',
+//   //     'contents',
+//   //     'projects'
+//   //   )
+//   if (!slug) throw new Error('Slug is undefined')
+//   const fullPath = path.join(projectDirectory, `${slug}.md`)
+//   try {
+//     const fileContents = fs?.readFile(fullPath, 'utf8')
+
+//     const { data, content } = matter(await fileContents)
+
+//     const processedContent = await remark().use(remarkHtml).process(content)
+//     const contentHtml = processedContent.toString()
+
+//     return {
+//       slug,
+//       content: contentHtml,
+//       ...(data as Omit<Project, 'slug' | 'content'>)
+//     }
+//   } catch (error) {
+//     console.error(`Error reading markdown file at ${fullPath}:`, error)
+//     throw new Error(`Failed to read markdown file for slug "${slug}"`)
+//   }
+// }

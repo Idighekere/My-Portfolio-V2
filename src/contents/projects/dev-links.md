@@ -9,7 +9,7 @@ stacks:
   - 'NextJS'
   - 'Tailwind'
   - 'Firebase'
-category: 'frontend'
+category: 'fullstack'
 liveLink: 'https://dev-links-idighs.vercel.app'
 codeLink: 'https://willbethere.netlify.app'
 ---
