@@ -3,7 +3,21 @@ slug: 'will-be-there'
 id: 1
 title: 'Will be There'
 description: 'An event planning web application designed to streamline the process of organizing events. A hackathon project worked on by a team of 8.'
-imageUrl: '/projects/willbethere.netlify.app.jpeg'
+imageUrl: '/projects/will-be-there/willbethere.netlify.app.jpeg'
+images: [
+  {
+    "src":"/projects/will-be-there/iPhone-13-PRO-MAX-willbethere.netlify.app.png",
+    "alt":"Will be there iPhone view",
+  },
+  {
+    "src":"/projects/will-be-there/Galaxy-Tab-S7-willbethere.netlify.app.png",
+    "alt":"will be there - tablet view",
+  },
+  {
+    "src":"/projects/will-be-there/Macbook-Air-willbethere.netlify.app.png ",
+    "alt":"will be there Desktop view",
+  },
+]
 isFeatured: true
 stacks:
   ['ReactJS','Tailwind','HTML','CSS',]
@@ -16,13 +30,6 @@ codeLink: 'https://github.com/WillBeThere-24/frontend/'
 An event planning web application designed to streamline the process of organizing events. A hackathon project worked on by a team of 8.
 
 As part of a team of 8, including a project manager, UI/UX designers, and both frontend and backend developers, I contributed as a frontend developer.
-
-## Gallery
-<!-- ![iPhone-13-PRO-MAX](/public/projects/project 1/iPhone-13-PRO-MAX-willbethere.netlify.app.png)
-![Galaxy-Tab-S7]( /projects/project 1/Galaxy-Tab-S7-willbethere.netlify.app.png)
-![Macbook-Air]( /projects/project 1/Macbook-Air-willbethere.netlify.app.png ) -->
-_No Images Available_
-
 
 ## Tasks
 - Contributed in building the event creation pages and components

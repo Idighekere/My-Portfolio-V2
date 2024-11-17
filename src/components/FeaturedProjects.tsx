@@ -52,7 +52,7 @@ const FeaturedProjects = (props: Props) => {
           </div>
 
           <div className="flex justify-center my-4">
-            <button className=' text-xl uppercase text-bgd bg-primary-blue w-auto rounded-full py-1 px-4'>
+            <button className=' text-xl uppercase /text-bgd bg-button-gradient-l  w-auto rounded-full py-1 px-4 border border-primary-blue'>
               <Link href='/projects' className='font-gitlab-mono font-[600]'>
                 See More Projects...
               </Link>

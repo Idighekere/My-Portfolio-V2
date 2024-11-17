@@ -14,12 +14,6 @@ liveLink: 'https://www.npflupdates.com'
 
 A comprehensive WordPress site developed for NPFL Updates, a sports organization focused on providing up-to-date news and updates on the Nigerian Professional Football League (NPFL). The site serves as a central hub for fans and stakeholders to access the latest news, match results, and team information.
 
-## Gallery
-_No images available._
-
-## Tasks
-_No specific tasks listed._
-
 ## Challenges
 - Addressing and troubleshooting occasional site errors to ensure continuous availability.
 

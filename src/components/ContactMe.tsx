@@ -143,7 +143,7 @@ const ContactMe = (props: Props) => {
             type='text'
             name='fullName'
             id=''
-            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50'
+            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-2 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50'
             placeholder='Full Name'
             required
             value={formData.fullName}
@@ -153,7 +153,7 @@ const ContactMe = (props: Props) => {
             type='email'
             name='email'
             id=''
-            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
+            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-2 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
             placeholder='Email Address'
             required
             value={formData.email}
@@ -163,7 +163,7 @@ const ContactMe = (props: Props) => {
             type='text'
             name='subject'
             id=''
-            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
+            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-2 w-full marker:md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
             placeholder='Subject'
             value={formData.subject}
             onChange={handleChange}
@@ -171,14 +171,14 @@ const ContactMe = (props: Props) => {
           <textarea
             name='message'
             id='message'
-            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-1 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
+            className='bg-transparent border border-primary-blue/80 rounded-md px-2 py-2 w-full md:w-64 lg:w-96 placeholder:text-soft-white/50 focus:text-soft-white/50 focus:border-text-soft-white/50'
             placeholder='Message'
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
           <button
-            className={`border border-primary-blue/80 bg-primary-blue/80 px-3 py-1 text-soft-white w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-transparent hover:border text-center ${
+            className={`border border-primary-blue/80 bg-button-gradient-l px-3 py-2 text-soft-white w-full md:w-64 rounded-md lg:w-96 duration-200 hover:bg-button-gradient-r hover:border text-center font-[600] ${
               loading ? 'bg-disabled' : ''
             }`}
             disabled={loading}

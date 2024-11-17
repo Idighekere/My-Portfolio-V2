@@ -96,14 +96,44 @@ img:hover {
 
 /* MARKDOWN SPECIFIC STYLING */
 .parsedown h1 {
-  @apply mt-8 text-3xl font-bold;
+  @apply mt-8 text-3xl font-bold mb-3 ;
 }
 .parsedown h2 {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-semibold ;
 }
 .parsedown h3 {
   @apply text-xl font-semibold;
 }
 .parsedown ul {
-  @apply list-disc list-inside
+  @apply list-disc list-inside mb-3
 }
+.parsedown p {
+  @apply mb-4
+}
+/*.parsedown h1 {
+  background-color: #149ddd;
+  padding: 5px;
+  background-image: linear-gradient(to right, #149ddd,#00021a);
+  border-top: 6px solid #149ddd;
+}*/
+/* .parsedown h2{ */
+
+  /* padding: 5px; */
+  /* background-image: linear-gradient(to right, #149ddd,#00021a); */
+  /* border-bottom: 3px solid #149ddd; */
+/* } */
+
+
+.gradient-border {
+    @apply relative;
+  }
+
+.gradient-border::before {
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  @apply content-[""]  p-[1px] inset-0 absolute
+  bg-gradient-to-r
+  from-primary-blue
+  via-transparent
+  to-primary-blue
+ }

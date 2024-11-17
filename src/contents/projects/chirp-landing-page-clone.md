@@ -17,11 +17,6 @@ codeLink: 'https://github.com/Idighekere/Chirp-Landing-Page-Clone'
 
 This project is a clone of the Chirp landing page, a platform known for providing advanced Twitter analytics. The design showcases the platform’s focus on delivering deep insights into user engagement and trends.
 
-## Gallery
-_No images available._
-
-## Tasks
-_No specific tasks listed._
 
 ## Challenges
 - Recreating complex UI elements while maintaining pixel-perfect accuracy.

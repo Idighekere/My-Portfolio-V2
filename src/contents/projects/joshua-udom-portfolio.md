@@ -16,9 +16,6 @@ codeLink: 'https://github.com/Idighekere/Joshua-Udom'
 
 I developed a portfolio website for a graphic designer, showcasing their work in an organized and visually appealing manner. The site was designed to highlight the designer’s creativity and professionalism.
 
-## Gallery
-_No images available._
-
 ## Tasks
 - Designed and implemented dynamic tabs to organize designs by category.
 - Integrated lightbox functionality to enhance the user experience when viewing each design.

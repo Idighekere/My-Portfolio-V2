@@ -4,6 +4,28 @@ slug: 'dev-links'
 title: 'Dev Links'
 description: 'Dev Links is a platform for developers to easily organize, share, and access important resources and links in one place.'
 imageUrl: '/projects/dev-links/dev-links-idighs.vercel.app-hero.png'
+images: [
+  {
+    "src":"/projects/dev-links/features-section.png",
+    "alt":"features section",
+  },
+  {
+    "src":"/projects/dev-links/logged-in-user-preview-page.png",
+    "alt":"Logged in user's preview page",
+  },
+  {
+    "src":"/projects/dev-links/links-page.png",
+    "alt":"Links page",
+  },
+  {
+    "src":"/projects/dev-links/login-page.png",
+    "alt":"Login Page",
+  },
+  {
+    "src":"/projects/dev-links/profile-details-page.png",
+    "alt":"Profile details page",
+  },
+]
 isFeatured: true
 stacks:
   - 'NextJS'
@@ -17,9 +39,6 @@ codeLink: 'https://willbethere.netlify.app'
 
 Dev Links is a platform for developers to easily organize, share, and access important resources and links in one place.
 Designed with simplicity and efficiency, it ensures easy collaboration and resource tracking.
-
-## Gallery
-_No images available._
 
 ## Tasks
 - Developed a user interface using Next.js and Zustand for state management.

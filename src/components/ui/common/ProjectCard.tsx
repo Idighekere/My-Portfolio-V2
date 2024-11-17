@@ -155,6 +155,7 @@ const ProjectCard = ({ projects }: {projects:Project[]}) => {
                       className={`px-1 py-2   duration-200 text-soft-white  hover:text-primary-blue ${
                         pathname === projectPathname ? '' : 'md:hidden'
                       }`}
+                      target="_blank"
                     >
                       <Icon icon='quill:link-out' width='27' height='27' />
                       {/* <p className="text-sm whitespace-nowrap">Live</p>{" "} */}
@@ -165,6 +166,7 @@ const ProjectCard = ({ projects }: {projects:Project[]}) => {
                         className={`px-1 py-2 rounded-md   hover:text-primary-blue border hover:border-primary-blue text-soft-white shadow-primary-blue hover:shadow-md  duration-200 hidden  ${
                           pathname === projectPathname ? '' : 'md:inline-block'
                         }`}
+                        target="_blank"
                       >
                         <button className='w-[7rem] flex items-center gap-3 md:gap-4 justify-center '>
                           <Icon

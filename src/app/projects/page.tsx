@@ -48,7 +48,7 @@ const Tabs = ({ tab, handleTabChange, currentTab }: Prop) => {
     <button
       onClick={() => handleTabChange(tab.id)}
       className={`${
-        currentTab === tab.id ? 'font-[600] text-bgd bg-primary-blue text- px-2 rounded-full hover:bg-transparent border border-transparent hover:border-primary-blue hover:text-primary-blue' : 'font-[400] '
+        currentTab === tab.id ? 'hover:bg-bgd font-[600] /text-bgd bg-button-gradient-l text- px-2 rounded-full  border border-primary-blue hover:text-primary-blue ' : 'font-[400] '
       } cursor-pointer hover:text-light-blue uppercase text-xl whitespace-nowrap block  font-incognito `}
     >
       {tab.title}

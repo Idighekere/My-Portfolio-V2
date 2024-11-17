@@ -109,10 +109,10 @@ const About = (props: Props) => {
                 rel='noopener noreferrer'
               >
                 <button
-                  className={`px-4 py-[6px] border border-primary-blue 50 text-soft-white bg-primary-blue  rounded-full flex items-center font-[400] gap-1 w-full justify-center`}
+                  className={`px-4 py-[6px] border border-primary-blue 50 text-soft-white bg-primary-blue  rounded-full flex items-center /font-[400] gap-1 w-full justify-center font-[600] bg-button-gradient-l`}
                 >
                   <p>View Resume</p>{' '}
-                  <Icon icon='hugeicons:download-05' width='26' height='26' />
+                  {/* <Icon icon='hugeicons:download-05' width='26' height='26' /> */}
                 </button>
               </a>
             </div>

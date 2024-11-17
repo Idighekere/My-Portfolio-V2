@@ -1,6 +1,6 @@
 ---
 slug: 'idighekere-udo-v2'
-id: 4
+id: 5
 title: 'Idighekere Udo - My Portfolio'
 description: 'My portfolio provides a detailed view of each project, allowing users to explore the work I’ve done comprehensively. '
 imageUrl: '/projects/this-portfolio/idighekere-udo.brimble.app.jpeg'
@@ -8,6 +8,7 @@ isFeatured: false
 stacks:
   - 'NextJS'
   - 'Tailwind'
+  - 'Markdown'
 category: 'frontend'
 liveLink: 'https://idighekere-udo-v2.netlify.app'
 codeLink: 'https://github.com/Idighekere/My-Portfolio-V2'
@@ -16,9 +17,6 @@ codeLink: 'https://github.com/Idighekere/My-Portfolio-V2'
 
 - This portfolio provides a comprehensive view of my work, allowing users to browse through projects and see the various features, challenges, and solutions implemented.
 - Each project includes details on the development process, challenges encountered, and solutions devised to overcome these obstacles.
-
-## Gallery
-_No images available._
 
 ## Tasks
 - Created a timeline for experience and education pages.

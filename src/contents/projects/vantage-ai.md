@@ -19,9 +19,6 @@ Vantage is an AI-driven tool created during a hackathon to help users extract, m
 
 It provides features like converting PDFs to various formats, generating quizzes, and offering contextual assistance.
 
-## Gallery
-_No images available._
-
 ## Tasks
 - Integrated a PDF parsing algorithm with AI-based text extraction.
 - Built a responsive UI for file uploads, content previews, and download options.

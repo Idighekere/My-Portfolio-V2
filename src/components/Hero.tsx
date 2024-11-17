@@ -51,7 +51,7 @@ const Hero = (props: Props) => {
                     <div>
                         <p className="flex gap-3 py-3 text-primary-blue">
                             {connectLinks.map((l) => (
-                                <Link href={l.link} key={l.link} className="hover:bg-deep-blue  rounded-full bg-transparent duration-350 p-3 w-10 h-10  flex justify-center items-center border-primary-blue border transition ease-in-out transition-translate hover:scale-[1.2]">
+                                <Link href={l.link} key={l.link} className="hover:bg-button-gradient-r  rounded-full bg-transparent duration-350 p-3 w-10 h-10  flex justify-center items-center border-primary-blue border transition ease-in-out transition-translate hover:scale-[1.2]">
                                     <Icon icon={l.icon} width="25" height="25" />
                                 </Link>
                             ))}

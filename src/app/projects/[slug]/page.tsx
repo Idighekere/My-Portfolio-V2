@@ -1,20 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { ParsedUrlQuery } from 'querystring'
 import fs from 'fs' //nodejs file system module, used to interact with the file system
 import path from 'path' //provides utilities for working with file and dir. paths
 //import { getAllProjectSlugs } from '@/lib/projects'
-import { remark } from 'remark'
-import remarkHtml from 'remark-html'
 import { parseMD } from '@/lib/parseMD'
 import BreadCrumb from '@/components/ui/common/BreadCrumb'
 import ShareIcons from '@/components/ui/common/ShareIcons'
-
+import sanitizeHtml from 'sanitize-html'
 import Image from 'next/image'
 
 import SourceCodeLiveLink from '@/components/ui/common/SourceCode_Live_Link'
 import Head from 'next/head'
 import NotFound from '@/components/NotFound'
+import ImageSlider from '@/components/ui/ImageSlider'
 type Props = {
   params: any
 }
@@ -70,6 +68,15 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
   }
   const { metadata, content } = await parseMD(fullPath)
   // console.log(metadata)
+
+
+//   const extractImages = (markdownContent: string) => {
+//   const matches = markdownContent.match(/!\[.*?\]\((.*?)\)/g) || [] // This regex matches the Markdown syntax for images: ![alt text](image-url)
+//   return matches.map(match => match.match(/\((.*?)\)/)?.[1] || '') //to extract the URL from each matched string.
+// }
+
+// const images = extractImages(content)
+// console.log(metadata.images)
   return (
     <>
 <Head>
@@ -93,7 +100,12 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
       </div>
 
       <h1 className='text-center'>{metadata.title}</h1>
-      <article dangerouslySetInnerHTML={{ __html: content }} />
+      <article dangerouslySetInnerHTML={{ __html: sanitizeHtml(content)}} className="markdown-content" />
+      {metadata?.images?.length>0 &&(<div className='my-5'>
+        <h2>Project Screenshots</h2>
+        <p>Here are some visuals showcasing the design of this project.</p>
+        <ImageSlider images={metadata?.images}/>
+      </div>)}
 
       {/* CODE LINK && LIVE LINK */}
       <p className='font-bold mt-6'>Explore this project and it's source code:</p>
@@ -102,8 +114,8 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
         codeLink={metadata.codeLink}
       />
 
-      <div className='mt-7'>
-        <p className=' font-[600] mb-2'><span className="text-xl font-[700]">Share:</span> Are you impressed and you wanna share?</p>
+      <div className='mt-7 flex flex-col md:items-center'>
+        <p className=' font-[600] '><span className="text-xl font-[700]">Share:</span> Are you impressed and you wanna share?</p>
         <ShareIcons shareLink={metadata.slug} shareTitle={metadata.title} />
       </div>
     </main>

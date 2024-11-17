@@ -7,12 +7,17 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
 
+type Images={
+  src:string
+  alt:string
+}
 export type Project = {
   id: number
   slug: string
   title: string
   description: string
   imageUrl: string
+  images?:Images[]
   isFeatured: boolean
   category: string
   stacks: string[]
@@ -49,6 +54,7 @@ export const getAllProjects = async (): Promise<Project[]> => {
         title: metadata.title,
         description: metadata.description,
         imageUrl: metadata.imageUrl,
+        images:metadata.images,
         isFeatured: metadata.isFeatured,
         category: metadata.category,
         stacks: metadata.stacks,

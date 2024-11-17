@@ -9,12 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "custom-gradient": "linear-gradient(to right, #3BF686, #4CA9FF)",
+        "button-gradient-r":"linear-gradient(to right,#149ddd,#00021a)",
+        "button-gradient-l":"linear-gradient(to left,#149ddd,#00021a)",
         "text-gradient":
           "linear-gradient(to right,#ccd6f6,#fff, #ccd6f6,  #fff, #ccd6f6)",
+        "section-title-gradient":"linear-gradient(to left,#149ddd,#149ddd)"
       },
       colors: {
         background: "#00021a",
