@@ -34,7 +34,8 @@ const connectLinks: ConnectType[] = [
 ];
 
 const Footer = (props: Props) => {
-    const date = Date()
+    const year = new Date().getFullYear()
+    // const date = Date()
     // const year = FullYear(date)
     // console.log(date)
     return (
@@ -54,7 +55,7 @@ const Footer = (props: Props) => {
                     <p className="">A Web Developer</p>
                 </div>
 
-                <div>            <p className="text-sm">© 2024 | Developed by <Link href="/">Idighekere Udo</Link></p>
+                <div>            <p className="text-sm">© {year} | Developed by <Link href="/">Idighekere Udo</Link></p>
                 </div>
 
 
